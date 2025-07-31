@@ -1,204 +1,134 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zenova — Future in Motion</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Nova V3 - Official Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Orbitron', sans-serif;
+      color: white;
     }body {
-  background: url('bg-stars.gif') no-repeat center center fixed;
+  background: black url('https://wallpapercave.com/wp/wp2535060.jpg') no-repeat center center fixed;
   background-size: cover;
-  color: #fff;
-  overflow-x: hidden;
 }
 
 header {
-  padding: 20px;
+  padding: 1rem;
   text-align: center;
-  background: rgba(0, 0, 0, 0.6);
-  font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 2rem;
   font-weight: bold;
-  backdrop-filter: blur(10px);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  }
+  to {
+    text-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+  }
 }
 
 .section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.model-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  padding: 30px;
-  margin: 30px 0;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
-  transition: all 0.3s ease;
-}
-
-.model-card:hover {
-  transform: scale(1.02);
-}
-
-.model-img {
-  width: 100%;
-  max-width: 300px;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  margin: 1rem;
   border-radius: 12px;
-  display: block;
-  margin: 0 auto 20px;
 }
 
-.model-title {
-  font-size: 2rem;
-  font-weight: bold;
+.models {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #111;
+  padding: 1rem;
+  border-radius: 10px;
   text-align: center;
-  margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.model-tagline {
-  text-align: center;
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  color: #ccc;
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #0ff;
 }
 
-.specs, .features {
-  margin-bottom: 20px;
-}
-
-.specs ul, .features ul {
-  padding-left: 20px;
-}
-
-.btn {
-  display: inline-block;
-  margin: 0 auto;
-  padding: 10px 25px;
-  border-radius: 25px;
-  border: 1px solid #fff;
-  color: #fff;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
-
-.btn:hover {
-  background-color: #fff;
-  color: #000;
+.card img {
+  width: 100%;
+  border-radius: 8px;
 }
 
 footer {
-  padding: 20px;
   text-align: center;
-  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
   font-size: 0.9rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.banner {
+  background: linear-gradient(to right, #00f2fe, #4facfe);
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
   </style>
 </head><body>
-  <header>
-    ZENOVA — THE FUTURE MEETS SPACE
-  </header>  <div class="section">
-    <!-- Nova Elite 1 -->
-    <div class="model-card">
-      <img src="nova-elite.jpg" alt="Nova Elite 1" class="model-img">
-      <div class="model-title">Nova Elite 1</div>
-      <div class="model-tagline">Founders Edition — 100% AI Access</div>
-      <div class="features">
-        <h3>Features:</h3>
-        <ul>
-          <li>Offline AI with custom personality</li>
-          <li>Full holographic projection</li>
-          <li>Satellite emergency mode</li>
-          <li>Body-heat based self-charging</li>
-          <li>100% Nova Store unlocked</li>
-        </ul>
+  <header>ZENOVA - NOVA V3</header>  <div class="banner">Countdown Starts Soon | Join Beta Program Now</div>  <section class="section">
+    <h2>Student Beta Program</h2>
+    <p>Be the first to explore Nova! Limited seats. Email: gokuren878@gmail.com</p>
+  </section>  <section class="section">
+    <h2>Our Models</h2>
+    <div class="models">
+      <div class="card">
+        <img src="Nova%20S1.jpg" alt="Nova S1" />
+        <h3>Nova S1</h3>
+        <p>Entry-level Smartwatch for students. Coming Soon</p>
       </div>
-      <div class="specs">
-        <h3>Specs:</h3>
-        <ul>
-          <li>Ultra-slim waterproof design</li>
-          <li>24K gold plating, limited edition engraving</li>
-          <li>Advanced health sensors</li>
-        </ul>
+      <div class="card">
+        <img src="Nova%201.jpg" alt="Nova 1" />
+        <h3>Nova 1</h3>
+        <p>Public Model | Offline AI | Water-resistant | Coming Soon</p>
       </div>
-      <div class="btn">Coming Soon</div>
-    </div><!-- Nova N9 1 -->
-<div class="model-card">
-  <img src="nova-n9.jpg" alt="Nova N9 1" class="model-img">
-  <div class="model-title">Nova N9 1</div>
-  <div class="model-tagline">Elite Edition — 70% AI Access</div>
-  <div class="features">
-    <h3>Features:</h3>
-    <ul>
-      <li>Offline AI with emotion detection</li>
-      <li>Dual device sync + satellite mode</li>
-      <li>Nova Store unlocked (premium)</li>
-    </ul>
-  </div>
-  <div class="specs">
-    <h3>Specs:</h3>
-    <ul>
-      <li>Waterproof black titanium build</li>
-      <li>Holographic alerts + Gesture Control</li>
-    </ul>
-  </div>
-  <div class="btn">Coming Soon</div>
-</div>
-
-<!-- Hyper Nova 1 -->
-<div class="model-card">
-  <img src="hyper-nova.jpg" alt="Hyper Nova 1" class="model-img">
-  <div class="model-title">Hyper Nova 1</div>
-  <div class="model-tagline">Premium Tier — 40% AI Access</div>
-  <div class="features">
-    <h3>Features:</h3>
-    <ul>
-      <li>AI-powered daily insights</li>
-      <li>Gesture-based navigation</li>
-      <li>Limited access to Nova Store</li>
-    </ul>
-  </div>
-  <div class="specs">
-    <h3>Specs:</h3>
-    <ul>
-      <li>Lightweight alloy design</li>
-      <li>Smart health monitoring</li>
-    </ul>
-  </div>
-  <div class="btn">Coming Soon</div>
-</div>
-
-<!-- Nova 1 -->
-<div class="model-card">
-  <img src="nova1.jpg" alt="Nova 1" class="model-img">
-  <div class="model-title">Nova 1</div>
-  <div class="model-tagline">Public Edition — 15% AI Access</div>
-  <div class="features">
-    <h3>Features:</h3>
-    <ul>
-      <li>Basic AI features</li>
-      <li>Nova mobile app companion</li>
-      <li>Upgrade option via Nova Store</li>
-    </ul>
-  </div>
-  <div class="specs">
-    <h3>Specs:</h3>
-    <ul>
-      <li>Essential sensors (O2, pulse, sleep)</li>
-      <li>Durable everyday casing</li>
-    </ul>
-  </div>
-  <div class="btn">Coming Soon</div>
-</div>
-
-  </div>  <footer>
-    &copy; 2025 Zenova | Crafted by Zaheer Baloch
+      <div class="card">
+        <img src="Hyper%20Nova%201.jpg" alt="Hyper Nova 1" />
+        <h3>Hyper Nova 1</h3>
+        <p>Premium Model | Advanced AI Features | Coming Soon</p>
+      </div>
+      <div class="card">
+        <img src="Nova%20N9%201.jpg" alt="Nova N9-1" />
+        <h3>Nova N9-1</h3>
+        <p>Elite AI | Hologram Projector | Satellite | Coming Soon</p>
+      </div>
+      <div class="card">
+        <img src="Nova%20Elite%201.jpg" alt="Nova Elite 1" />
+        <h3>Nova Elite 1</h3>
+        <p>Founder's Edition | Exclusive Access | Coming Soon</p>
+      </div>
+    </div>
+  </section>  <footer>
+    &copy; 2025 Zenova | Designed by Zaheer Baloch
   </footer>
 </body></html>
