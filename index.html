@@ -1,148 +1,158 @@
-               <!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zenova — Where Future Meets Space</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <title>Zenova | Where Future Meets Space</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Orbitron', sans-serif;
+      font-family: 'Inter', sans-serif;
+      color: white;
     }body {
-  background-color: #000;
-  color: #fff;
-  overflow-x: hidden;
-}
-
-.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: radial-gradient(ellipse at bottom, #000 0%, #0b0b2b 100%);
+  background: black url('https://i.ibb.co/sC7KjVW/space-bg.jpg') no-repeat center center fixed;
   background-size: cover;
-}
-
-.stars {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: transparent url('https://i.ibb.co/M7x2FX4/stars-bg.gif') repeat top center;
-  animation: moveStars 100s linear infinite;
-  z-index: -1;
-}
-
-@keyframes moveStars {
-  from {background-position: 0 0;}
-  to {background-position: 10000px 5000px;}
+  overflow-x: hidden;
 }
 
 header {
   text-align: center;
-  padding: 100px 20px 30px;
+  padding: 50px 20px 20px;
 }
 
-h1 {
-  font-size: 3rem;
-  background: linear-gradient(90deg, #0fffc1, #38f9d7);
+header h1 {
+  font-size: 3em;
+  background: linear-gradient(90deg, #0ff, #f0f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: glowText 2s infinite alternate;
+  animation: glow 2s infinite alternate;
 }
 
-@keyframes glowText {
-  from { text-shadow: 0 0 10px #0fffc1; }
-  to { text-shadow: 0 0 30px #38f9d7; }
+@keyframes glow {
+  0% { text-shadow: 0 0 10px #0ff; }
+  100% { text-shadow: 0 0 20px #f0f; }
 }
 
 .slogan {
-  font-size: 1.2rem;
-  color: #ccc;
+  font-size: 1.2em;
   margin-top: 10px;
+  color: #ccc;
 }
 
-.countdown {
-  margin: 40px auto;
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.models {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.model {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
   padding: 20px;
-  text-align: center;
-  font-size: 1.4rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  width: 80%;
-  max-width: 500px;
-  border: 1px solid rgba(255,255,255,0.2);
+  max-width: 250px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.countdown span {
-  font-size: 2rem;
-  display: block;
-  margin: 10px 0;
+.model:hover {
+  transform: translateY(-10px);
 }
 
-.form-section, .student-section {
-  margin: 50px auto;
-  padding: 30px;
-  width: 90%;
-  max-width: 500px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 16px;
-  text-align: center;
+.model img {
+  width: 100%;
+  border-radius: 10px;
 }
 
-.form-section input, .student-section input {
+.model h3 {
+  margin-top: 15px;
+  font-size: 1.2em;
+  color: #0ff;
+}
+
+.join-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+.join-section input,
+.join-section button {
   padding: 12px;
-  margin: 10px;
-  width: 90%;
-  border-radius: 8px;
+  font-size: 1em;
   border: none;
-  outline: none;
-  background-color: #1c1c1c;
-  color: #fff;
+  margin-top: 20px;
+  width: 100%;
 }
 
-.form-section button, .student-section button {
-  padding: 12px 20px;
-  background-color: #0fffc1;
-  border: none;
-  color: #000;
+.join-section input {
+  border-radius: 10px 10px 0 0;
+  background-color: #111;
+  color: white;
+}
+
+.join-section button {
+  background-color: #0ff;
+  color: black;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 0 0 10px 10px;
   cursor: pointer;
 }
 
 footer {
-  margin: 60px 0 20px;
   text-align: center;
-  color: #777;
+  padding: 30px 20px;
+  background-color: #000;
+  color: #aaa;
 }
 
   </style>
 </head><body>
-  <div class="background">
-    <div class="stars"></div>
-  </div>
   <header>
     <h1>Zenova</h1>
-    <p class="slogan">Where Future Meets Space</p>
-  </header>  <div class="countdown">
-    <p>Countdown Begins Soon…</p>
-    <span>00:00:00:00</span>
-  </div>  <div class="form-section">
-    <h2>Join the Beta Waitlist</h2>
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Your Email">
-    <button>Register</button>
-  </div>  <div class="student-section">
-    <h2>Join Student Program</h2>
-    <input type="text" placeholder="Name">
-    <input type="email" placeholder="Email">
-    <input type="text" placeholder="Institute">
-    <button>Join Now</button>
-  </div>  <footer>
-    <p>© 2025 Zenova. All rights reserved.</p>
+    <p class="slogan">Where Future Meets Space 🚀</p>
+  </header>  <section class="section">
+    <h2>Meet the Nova Series</h2>
+    <div class="models">
+      <div class="model">
+        <img src="https://i.ibb.co/qRY3TjB/nova1.jpg" alt="Nova 1">
+        <h3>Nova 1 (Public)</h3>
+      </div>
+      <div class="model">
+        <img src="https://i.ibb.co/98h7NGr/hypernova1.jpg" alt="Hyper Nova 1">
+        <h3>Hyper Nova 1 (Premium)</h3>
+      </div>
+      <div class="model">
+        <img src="https://i.ibb.co/tmKdGhz/n9.jpg" alt="Nova N9-1">
+        <h3>Nova N9-1 (Elite)</h3>
+      </div>
+      <div class="model">
+        <img src="https://i.ibb.co/3cMZ0dj/elite.jpg" alt="Nova Elite 1">
+        <h3>Nova Elite 1 (Founders Edition)</h3>
+      </div>
+    </div>
+  </section>  <section class="section join-section">
+    <h2>Join the Beta Program</h2>
+    <input type="email" placeholder="Enter your email" />
+    <button>Join Waitlist</button>
+  </section>  <section class="section join-section">
+    <h2>Zenova Student Program 🎓</h2>
+    <input type="email" placeholder="Student Email Address" />
+    <button>Join as Student</button>
+  </section>  <footer>
+    <p>© Zenova | Powered by Future — Designed & Engineered by Zaheer Baloch 🚀</p>
   </footer>
 </body></html>
