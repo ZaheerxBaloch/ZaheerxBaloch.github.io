@@ -3,51 +3,210 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zenova | Where Future Meets Space</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Zenova – Where Future Meets Space</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    body {
+      background: black;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Space background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(ellipse at center, rgba(255,255,255,0.1) 0%, transparent 100%), url('https://i.imgur.com/hJvSJcz.jpg') repeat;
+      background-size: cover;
+      animation: spaceMove 60s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes spaceMove {
+      from { background-position: 0 0; }
+      to { background-position: -10000px 10000px; }
+    }
+
+    header {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #00ffe7;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: #00ffe7;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 15px;
+        border-radius: 10px;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    .hero {
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      color: #00ffe7;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-top: 10px;
+      color: #ccc;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #00ffe7, 0 0 10px #00ffe7; }
+      to { text-shadow: 0 0 15px #00ffe7, 0 0 30px #00ffe7; }
+    }
+
+    /* Email Signup */
+    #email-signup {
+      margin: 80px auto;
+      text-align: center;
+    }
+
+    #email-signup h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #00ffe7;
+    }
+
+    #email-signup input[type="email"] {
+      padding: 12px;
+      width: 280px;
+      max-width: 80%;
+      border: none;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    #email-signup button {
+      padding: 12px 25px;
+      background-color: #00ffe7;
+      border: none;
+      margin-left: 10px;
+      border-radius: 8px;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #email-signup button:hover {
+      background-color: white;
+    }
+
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
 <body>
-  <canvas id="stars"></canvas>
 
-  <header class="hero">
-    <h1>Zenova</h1>
-    <p class="tagline">Where Future Meets Space</p>
-    <a href="#email-signup" class="btn">Join Early Access</a>
+  <header>
+    <div class="logo">ZENOVA</div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav class="menu" id="menu">
+      <a href="#">Home</a>
+      <a href="#email-signup">Join</a>
+      <a href="#">About</a>
+    </nav>
   </header>
 
-  <section class="features">
-    <h2>Explore the Nova Series</h2>
-    <div class="cards">
-      <div class="card"><h3>Nova 1</h3><p>Smart. Slim. Satellite-powered.</p></div>
-      <div class="card"><h3>Hyper Nova</h3><p>More power, more AI.</p></div>
-      <div class="card"><h3>Nova N9-1</h3><p>Elite holographic experience.</p></div>
-    </div>
+  <section class="hero">
+    <h1>Where Future Meets Space</h1>
+    <p>Explore the power of Nova Watch, Ring & beyond. A journey through innovation.</p>
   </section>
 
-  <section class="ring">
-    <h2>Nova Ring</h2>
-    <p>Control your world with a gesture.</p>
-  </section>
-
-  <section class="app">
-    <h2>Nova App & OS</h2>
-    <p>Fully synced. Fully yours.</p>
-  </section>
-
-  <section id="email-signup" class="signup">
-    <h2>Be Part of the Future</h2>
-    <p>Enter your email to join the early access waitlist.</p>
-    <form>
-      <input type="email" placeholder="you@example.com" required />
-      <button type="submit">Join</button>
-    </form>
+  <section id="email-signup">
+    <h2>Join the Waitlist</h2>
+    <input type="email" placeholder="Enter your email" />
+    <button>Submit</button>
   </section>
 
   <footer>
-    <p>© 2025 Zenova. All rights reserved.</p>
-    <p class="slogan">Where Future Meets Space</p>
+    &copy; 2025 Zenova. All rights reserved.
   </footer>
 
-  <script src="stars.js"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+    }
+  </script>
+
 </body>
 </html>
