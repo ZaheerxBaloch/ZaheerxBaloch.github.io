@@ -1,133 +1,105 @@
-    <!DOCTYPE html><html lang="en">
-<head>
+        <!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zenova - Where Future Meets Space</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Zen+Dots&display=swap" rel="stylesheet" />
+  <title>Zenova | Where Future Meets Space</title>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Orbitron', sans-serif;
-    }
-    body {
-      background: linear-gradient(to bottom, #000010, #050022);
-      color: #fff;
-      overflow-x: hidden;
-    }
-    header {
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      font-family: 'Zen Dots', cursive;
-      font-size: 3rem;
-      color: #00ffe7;
-      text-shadow: 0 0 10px #00ffe7;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-    }
-    .models-section, .student-program, .join-section {
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      backdrop-filter: blur(10px);
-      padding: 2rem;
-      width: 250px;
-      transition: 0.3s ease;
-      position: relative;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-    }
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
-    }
-    .card img {
-      width: 100%;
-      border-radius: 15px;
-      margin-bottom: 1rem;
-    }
-    .card h3 {
-      color: #00ffe7;
-      margin-bottom: 0.5rem;
-    }
-    .join-section button {
-      padding: 1rem 2rem;
-      background: #00ffe7;
-      color: #000;
-      font-weight: bold;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      margin-top: 2rem;
-      transition: 0.3s ease;
-    }
-    .join-section button:hover {
-      background: #00e6cc;
-      box-shadow: 0 0 15px #00ffe7;
-    }
-    .popup {
-      position: fixed;
-      bottom: -100px;
-      right: 20px;
-      background: #111;
-      color: #0ff;
-      padding: 1rem 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 20px #0ff;
-      animation: slideup 1s forwards;
-      animation-delay: 2s;
-    }
-    @keyframes slideup {
-      to { bottom: 20px; }
-    }
+      font-family: 'Inter', sans-serif;
+    }body {
+  background: linear-gradient(to bottom, #000010, #0b0c1c);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+header h1 {
+  font-family: 'Zen Dots', sans-serif;
+  font-size: 2.5rem;
+  color: #00ffff;
+}
+
+header p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #cfcfcf;
+}
+
+.countdown-container {
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #00ffff44;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 400px;
+}
+
+.countdown-container h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.countdown-timer {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #00ffff;
+}
+
+.section {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.section h2 {
+  font-family: 'Zen Dots', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00ffff;
+}
+
+.section p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: auto;
+  color: #c0c0c0;
+}
+
+.student-program {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid #00ffff;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
   </style>
-</head>
-<body>
+</head><body>
   <header>
     <h1>Zenova</h1>
     <p>Where Future Meets Space</p>
-  </header>  <section class="models-section">
-    <h2>AI Showcase</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://via.placeholder.com/250x180.png?text=Nova+Watch" alt="Nova Watch" />
-        <h3>Nova Watch</h3>
-        <p>Futuristic AI-powered wearable with holographic UI and satellite link.</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/250x180.png?text=Nova+Ring" alt="Nova Ring" />
-        <h3>Nova Ring</h3>
-        <p>Gesture-control ring with AI shortcuts, LED glow and haptic feedback.</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/250x180.png?text=Nova+Elite" alt="Nova Elite" />
-        <h3>Nova Elite</h3>
-        <p>Founders Edition with full AI access, glow branding & premium perks.</p>
-      </div>
-    </div>
-  </section>  <section class="student-program">
-    <h2>Zenova Student Program</h2>
-    <p>We empower students with innovation tools. Join the future with us as a Zenova Student Ambassador and build with AI and space tech.</p>
-  </section>  <section class="join-section">
-    <h2>Want Early Access?</h2>
-    <button>Join the Beta</button>
-  </section>  <div class="popup">
-    🔔 Zenova is launching soon. Be among the first to try it!
-  </div>
-</body>
-</html>
+  </header>  <section class="countdown-container">
+    <h2>Countdown Begins Soon</h2>
+    <div class="countdown-timer">00:00:00:00</div>
+  </section>  <section class="section">
+    <h2>Student Program</h2>
+    <p>Join the Zenova Student Program and become an early innovator. Get exclusive access, insights, and internships as we reshape the future of AI wearables.</p>
+  </section>  <footer>
+    &copy; 2025 Zenova. All rights reserved.
+  </footer>
+</body></html>
