@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Zenova - Where Future Meets Space</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Zen+Dots&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: radial-gradient(ellipse at bottom, #0d0d1a 0%, #000000 100%);
-      color: #fff;
+      font-family: 'Audiowide', 'Zen Dots', cursive;
+      background: radial-gradient(ellipse at bottom, #0a0a1a 0%, #000000 100%);
+      color: #ffffff;
       overflow-x: hidden;
     }
 
@@ -20,25 +20,24 @@
     }
 
     header h1 {
-      font-size: 3.5rem;
-      color: #ffffff;
-      background: linear-gradient(45deg, #0ff, #0f0, #f0f);
-      background-clip: text;
+      font-size: 3.7rem;
+      letter-spacing: 4px;
+      background: linear-gradient(90deg, #0ff, #8f0, #f0f, #0ff);
+      background-size: 300% 300%;
+      animation: glowText 6s ease infinite;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: pulse 5s infinite;
     }
 
     header p {
       font-size: 1.2rem;
       color: #ccc;
-      margin-top: 10px;
+      margin-top: 15px;
     }
 
-    @keyframes pulse {
-      0% { text-shadow: 0 0 10px #0ff; }
-      50% { text-shadow: 0 0 30px #f0f; }
-      100% { text-shadow: 0 0 10px #0ff; }
+    @keyframes glowText {
+      0%,100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
     }
 
     .stars {
@@ -46,13 +45,13 @@
       width: 100%;
       height: 100%;
       background: transparent url('https://raw.githubusercontent.com/kevin-powell/animated-background/main/stars.png') repeat;
-      animation: moveStars 100s linear infinite;
+      animation: moveStars 120s linear infinite;
       z-index: 0;
     }
 
     @keyframes moveStars {
       from { background-position: 0 0; }
-      to { background-position: -10000px 5000px; }
+      to { background-position: -8000px 4000px; }
     }
 
     .cards {
@@ -68,40 +67,41 @@
     .card {
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
       border-radius: 20px;
-      width: 280px;
+      width: 290px;
       padding: 30px 20px;
       text-align: center;
-      box-shadow: 0 0 20px rgba(0,255,255,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 20px rgba(0,255,255,0.05);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease-in-out;
     }
 
     .card:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 0 30px rgba(0,255,255,0.3);
+      transform: scale(1.04);
+      box-shadow: 0 0 30px rgba(0,255,255,0.4);
     }
 
     .card h2 {
-      color: #0ff;
+      color: #00ffff;
+      font-size: 1.5rem;
       margin-bottom: 10px;
     }
 
     .card p {
       color: #aaa;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
 
     footer {
       text-align: center;
       padding: 40px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: #666;
     }
 
     @media screen and (max-width: 600px) {
       header h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
       }
       .card {
         width: 90%;
@@ -113,29 +113,29 @@
   <div class="stars"></div>
 
   <header>
-    <h1>Zenova</h1>
+    <h1>ZENOVA</h1>
     <p>Where Future Meets Space</p>
   </header>
 
   <section class="cards">
     <div class="card">
-      <h2>Nova Watch</h2>
-      <p>The ultra-slim AI smartwatch with satellite power, offline AI, and 100% innovation packed into your wrist.</p>
+      <h2>NOVA WATCH</h2>
+      <p>Ultra-slim AI smartwatch with satellite, offline AI, and holographic projection. Redefine time and power.</p>
     </div>
 
     <div class="card">
-      <h2>Nova Ring</h2>
-      <p>Gesture control, glowing LED alerts, and seamless AI interaction — all inside a smart ring.</p>
+      <h2>NOVA RING</h2>
+      <p>Gesture control, glowing LEDs, and portable AI control inside a compact futuristic ring.</p>
     </div>
 
     <div class="card">
-      <h2>Nova Elite</h2>
-      <p>Limited edition. Gold-plated power. Unlock 100% AI access with Nova Elite 1 – the ultimate status tech.</p>
+      <h2>NOVA ELITE</h2>
+      <p>Gold Edition. Maximum AI access. Designed for leaders of the next tech revolution.</p>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Zenova Technologies. Powered by Zaheer x Zenova.
+    &copy; 2025 Zenova Technologies | Powered by Zaheer x Zenova
   </footer>
 </body>
 </html>
