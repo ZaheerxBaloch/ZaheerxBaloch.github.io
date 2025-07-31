@@ -1,173 +1,170 @@
-  <!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zenova | Future Meets Space</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: black url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: black;
       color: white;
-    }header {
+      overflow-x: hidden;
+    }.starfield {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url('https://raw.githubusercontent.com/muratkemaldar/animated-starfield/master/starfield.gif') repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+header {
   text-align: center;
   padding: 3rem 1rem 1rem;
-  background: rgba(0, 0, 0, 0.8);
 }
 
-h1 {
-  font-family: 'Orbitron', sans-serif;
+h1.logo {
   font-size: 3rem;
-  color: #ff0055;
-  margin-bottom: 0.5rem;
+  color: #00f0ff;
+  animation: glow 2s ease-in-out infinite alternate;
 }
 
-h2 {
-  font-family: 'Orbitron', sans-serif;
-  color: #00ffe7;
-  text-align: center;
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 30px #00f0ff;
+  }
+  to {
+    text-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff;
+  }
 }
 
-.models {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+section.models {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  padding: 2rem 1rem;
+  padding: 2rem;
 }
 
-.card {
+.model {
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid #333;
-  border-radius: 16px;
-  padding: 1rem;
-  max-width: 300px;
-  text-align: center;
-  transition: 0.3s;
-}
-
-.card img {
-  width: 100%;
   border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  backdrop-filter: blur(5px);
 }
 
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #00ffe7;
+.model img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.model h2 {
+  margin: 1rem 0 0.5rem;
 }
 
 .specs {
-  text-align: left;
-  margin-top: 1rem;
-}
-
-.specs ul {
-  padding-left: 1.2rem;
-}
-
-.footer {
-  text-align: center;
-  padding: 2rem 1rem 1rem;
   font-size: 0.9rem;
-  background: rgba(0, 0, 0, 0.7);
+  line-height: 1.5;
+  color: #ccc;
 }
 
-.coming-soon {
-  background: #ff0055;
-  display: inline-block;
-  padding: 0.3rem 0.8rem;
-  border-radius: 12px;
-  color: white;
-  margin-top: 0.5rem;
+.cta {
+  text-align: center;
+  margin: 3rem auto;
+}
+
+.cta button {
+  background: #00f0ff;
+  border: none;
+  padding: 1rem 2rem;
+  color: black;
   font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta button:hover {
+  background: #00d0e0;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #777;
+  font-size: 0.8rem;
 }
 
   </style>
 </head><body>
+  <div class="starfield"></div>
   <header>
-    <h1>Zenova</h1>
-    <p>Where the future meets space. Explore our next-gen AI wearables.</p>
-  </header>  <section>
-    <h2>Explore Nova Series</h2>
-    <div class="models"><!-- Nova 1 -->
-  <div class="card">
-    <img src="Nova%201.jpg" alt="Nova 1">
-    <h3>Nova 1</h3>
-    <div class="coming-soon">Coming Soon</div>
-    <div class="specs">
-      <ul>
-        <li>Basic AI Access (15%)</li>
-        <li>Heat Charging</li>
-        <li>Waterproof Design</li>
-        <li>Satellite SOS Enabled</li>
-      </ul>
+    <h1 class="logo">Zenova</h1>
+    <p>Where Future Meets Space</p>
+  </header>  <section class="models">
+    <div class="model">
+      <img src="Nova%201.png" alt="Nova 1">
+      <h2>Nova 1</h2>
+      <div class="specs">
+        AI Access: 15%<br>
+        Waterproof, slim, health sensors<br>
+        Charging: Body-heat/Solar<br>
+        Satellite Emergency Access<br>
+        <strong>Status:</strong> Coming Soon
+      </div>
     </div>
-  </div>
-
-  <!-- Hyper Nova 1 -->
-  <div class="card">
-    <img src="Hyper%20Nova%201.jpg" alt="Hyper Nova 1">
-    <h3>Hyper Nova 1</h3>
-    <div class="coming-soon">Coming Soon</div>
-    <div class="specs">
-      <ul>
-        <li>Premium AI (40%)</li>
-        <li>Dual Device Sync</li>
-        <li>Offline AI Core</li>
-        <li>Glow Customization</li>
-      </ul>
+    <div class="model">
+      <img src="Hyper%20Nova%201.png" alt="Hyper Nova 1">
+      <h2>Hyper Nova 1</h2>
+      <div class="specs">
+        AI Access: 40%<br>
+        Dual Device Connect, Mood AI<br>
+        LED Glows + Plugin System<br>
+        Health + Stress Sensors<br>
+        <strong>Status:</strong> Coming Soon
+      </div>
     </div>
-  </div>
-
-  <!-- Nova N9-1 -->
-  <div class="card">
-    <img src="Nova%20N9%201.jpg" alt="Nova N9-1">
-    <h3>Nova N9-1</h3>
-    <div class="coming-soon">Coming Soon</div>
-    <div class="specs">
-      <ul>
-        <li>Elite AI (70%)</li>
-        <li>Holographic Display</li>
-        <li>Encrypted Security</li>
-        <li>Gesture Control</li>
-      </ul>
+    <div class="model">
+      <img src="Nova%20N9%201.png" alt="Nova N9-1">
+      <h2>Nova N9-1</h2>
+      <div class="specs">
+        AI Access: 70%<br>
+        Holographic Projection<br>
+        Satellite + Emergency Calling<br>
+        Long Battery, Updates 5+7 yrs<br>
+        <strong>Status:</strong> Coming Soon
+      </div>
     </div>
-  </div>
-
-  <!-- Nova Elite 1 -->
-  <div class="card">
-    <img src="Nova%20Elite%201.jpg" alt="Nova Elite 1">
-    <h3>Nova Elite 1</h3>
-    <div class="coming-soon">Founders Only</div>
-    <div class="specs">
-      <ul>
-        <li>100% AI Access</li>
-        <li>Exclusive Perks & Design</li>
-        <li>Gold-Plated Finish</li>
-        <li>Lifetime Updates</li>
-      </ul>
+    <div class="model">
+      <img src="Nova%20Elite%201.png" alt="Nova Elite 1">
+      <h2>Nova Elite 1</h2>
+      <div class="specs">
+        AI Access: 100%<br>
+        24K Gold Finish<br>
+        Elite Membership, Luxury Build<br>
+        Limited Founder's Edition<br>
+        <strong>Status:</strong> Coming Soon
+      </div>
     </div>
-  </div>
-
-  <!-- Nova S1 -->
-  <div class="card">
-    <img src="Nova%20S1.jpg" alt="Nova S1">
-    <h3>Nova S1 (Student Edition)</h3>
-    <div class="coming-soon">Beta Access</div>
-    <div class="specs">
-      <ul>
-        <li>Essential Features Only</li>
-        <li>Budget-Friendly</li>
-        <li>Entry to Nova Ecosystem</li>
-        <li>Join Student Program</li>
-      </ul>
+    <div class="model">
+      <img src="Nova%20S1.png" alt="Nova S1">
+      <h2>Nova S1 (Student Edition)</h2>
+      <div class="specs">
+        Affordable Entry Model<br>
+        LED Alerts + Health Features<br>
+        Glowing Logo, Phone Control<br>
+        App Upgrades via Store<br>
+        <strong>Status:</strong> Coming Soon
+      </div>
     </div>
-  </div>
-
-</div>
-
-  </section>  <footer class="footer">
-    <p>Designed by Zaheer Baloch — Zenova &copy; 2025</p>
+  </section>  <div class="cta">
+    <button onclick="alert('Waitlist Join Feature Coming Soon')">Join Waitlist</button>
+  </div>  <footer>
+    &copy; 2025 Zenova. Designed by Zaheer Baloch
   </footer>
 </body></html>
