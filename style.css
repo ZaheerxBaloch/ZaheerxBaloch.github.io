@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+canvas#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: transparent;
+}
+
+.hero h1 {
+  font-size: 4em;
+  color: #00ffff;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 1.5em;
+  color: #ccc;
+}
+
+.btn {
+  background: #00ffff;
+  color: black;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.features, .ring, .app, .signup {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #00ffff55;
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+}
+
+.signup form {
+  margin-top: 20px;
+}
+
+.signup input[type="email"] {
+  padding: 10px;
+  width: 240px;
+  border-radius: 8px;
+  border: none;
+  margin-right: 10px;
+}
+
+.signup button {
+  padding: 10px 20px;
+  background: #00ffff;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: #111;
+  margin-top: 40px;
+}
+
+footer .slogan {
+  color: #00ffff;
+  font-weight: bold;
+  margin-top: 10px;
+}
