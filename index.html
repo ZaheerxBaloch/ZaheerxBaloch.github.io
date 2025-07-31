@@ -1,158 +1,212 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html><html lang="en">
+<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zenova | Where Future Meets Space</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zenova | Official Site</title>
   <style>
-    * {
+    body {
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-      color: white;
-    }body {
-  background: black url('https://i.ibb.co/sC7KjVW/space-bg.jpg') no-repeat center center fixed;
-  background-size: cover;
-  overflow-x: hidden;
-}
-
-header {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: black url('bg-stars.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }header {
   text-align: center;
-  padding: 50px 20px 20px;
+  padding: 3rem 1rem 1rem;
 }
 
-header h1 {
-  font-size: 3em;
-  background: linear-gradient(90deg, #0ff, #f0f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-  0% { text-shadow: 0 0 10px #0ff; }
-  100% { text-shadow: 0 0 20px #f0f; }
-}
-
-.slogan {
-  font-size: 1.2em;
-  margin-top: 10px;
-  color: #ccc;
-}
-
-.section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.section h2 {
-  font-size: 2.5em;
-  margin-bottom: 30px;
+h1 {
+  font-size: 3rem;
+  color: #00f6ff;
+  text-shadow: 0 0 20px #0ff;
 }
 
 .models {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
 }
 
 .model {
   background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  padding: 20px;
-  max-width: 250px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease;
+  border-radius: 15px;
+  padding: 1.5rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 12px #00f6ff66;
+  transition: transform 0.4s ease;
 }
 
 .model:hover {
-  transform: translateY(-10px);
+  transform: scale(1.05);
 }
 
 .model img {
   width: 100%;
-  border-radius: 10px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
 }
 
-.model h3 {
-  margin-top: 15px;
-  font-size: 1.2em;
+.model h2 {
+  margin: 0.3rem 0;
+  font-size: 1.5rem;
   color: #0ff;
 }
 
-.join-section {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 40px;
-  border-radius: 20px;
-  max-width: 600px;
-  margin: 40px auto;
+.model p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
 }
 
-.join-section input,
-.join-section button {
-  padding: 12px;
-  font-size: 1em;
-  border: none;
-  margin-top: 20px;
-  width: 100%;
-}
-
-.join-section input {
-  border-radius: 10px 10px 0 0;
-  background-color: #111;
-  color: white;
-}
-
-.join-section button {
-  background-color: #0ff;
-  color: black;
+.coming-soon {
+  background: #ff0044;
+  padding: 0.4rem 0.8rem;
+  display: inline-block;
+  border-radius: 8px;
   font-weight: bold;
-  border-radius: 0 0 10px 10px;
+  margin: 0.5rem 0;
+}
+
+.student-program {
+  text-align: center;
+  margin: 3rem auto;
+}
+
+.student-program button {
+  background: #0ff;
+  color: #000;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
+  transition: background 0.3s;
+}
+
+.student-program button:hover {
+  background: #00c6aa;
 }
 
 footer {
+  margin-top: 3rem;
   text-align: center;
-  padding: 30px 20px;
-  background-color: #000;
-  color: #aaa;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.countdown {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 2rem auto;
+  color: #00ffcc;
+}
+
+.waitlist {
+  text-align: center;
+  margin: 3rem auto;
+}
+
+.waitlist input {
+  padding: 0.5rem;
+  width: 250px;
+  margin-right: 0.5rem;
+  border-radius: 6px;
+  border: none;
+}
+
+.waitlist button {
+  padding: 0.6rem 1.2rem;
+  background: #0ff;
+  color: #000;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
   </style>
-</head><body>
-  <header>
-    <h1>Zenova</h1>
-    <p class="slogan">Where Future Meets Space 🚀</p>
-  </header>  <section class="section">
-    <h2>Meet the Nova Series</h2>
-    <div class="models">
-      <div class="model">
-        <img src="https://i.ibb.co/qRY3TjB/nova1.jpg" alt="Nova 1">
-        <h3>Nova 1 (Public)</h3>
-      </div>
-      <div class="model">
-        <img src="https://i.ibb.co/98h7NGr/hypernova1.jpg" alt="Hyper Nova 1">
-        <h3>Hyper Nova 1 (Premium)</h3>
-      </div>
-      <div class="model">
-        <img src="https://i.ibb.co/tmKdGhz/n9.jpg" alt="Nova N9-1">
-        <h3>Nova N9-1 (Elite)</h3>
-      </div>
-      <div class="model">
-        <img src="https://i.ibb.co/3cMZ0dj/elite.jpg" alt="Nova Elite 1">
-        <h3>Nova Elite 1 (Founders Edition)</h3>
-      </div>
-    </div>
-  </section>  <section class="section join-section">
-    <h2>Join the Beta Program</h2>
+</head>
+<body>  <header>
+    <h1>Zenova: Powering The Future</h1>
+    <p>Welcome to the official site of the most futuristic AI smartwatch ever created.</p>
+  </header>  <section class="models">
+    <div class="model">
+      <img src="Nova N9 1.jpg" alt="Nova N9 1">
+      <h2>Nova N9 1</h2>
+      <div class="coming-soon">COMING SOON</div>
+      <p><strong>AI Access:</strong> 70%</p>
+      <p><strong>Features:</strong> Satellite, Hologram, Heat-Charging, Dual-Connect</p>
+      <p><strong>Specs:</strong> Zenova OS, 10–14d Battery, Waterproof</p>
+    </div><div class="model">
+  <img src="Nova Elite 1.jpg" alt="Nova Elite 1">
+  <h2>Nova Elite 1</h2>
+  <div class="coming-soon">COMING SOON</div>
+  <p><strong>AI Access:</strong> 100%</p>
+  <p><strong>Features:</strong> 24K Gold, Elite Membership, Glow+ Control</p>
+  <p><strong>Specs:</strong> Lifetime Access, Premium Case, Advanced Sensors</p>
+</div>
+
+<div class="model">
+  <img src="Hyper Nova 1.jpg" alt="Hyper Nova 1">
+  <h2>Hyper Nova 1</h2>
+  <div class="coming-soon">COMING SOON</div>
+  <p><strong>AI Access:</strong> 40%</p>
+  <p><strong>Features:</strong> Offline AI, Mood Detection, Glow Ring Support</p>
+  <p><strong>Specs:</strong> Slim Build, 7-day Battery, Gesture Control</p>
+</div>
+
+<div class="model">
+  <img src="Nova 1.jpg" alt="Nova 1">
+  <h2>Nova 1 (Public)</h2>
+  <div class="coming-soon">COMING SOON</div>
+  <p><strong>AI Access:</strong> 15%</p>
+  <p><strong>Features:</strong> Basic Notifications, Glow Effects</p>
+  <p><strong>Specs:</strong> Budget-friendly, 5-day Battery</p>
+</div>
+
+<div class="model">
+  <img src="Nova S1.jpg" alt="Nova S1">
+  <h2>Nova S1 (Student Edition)</h2>
+  <div class="coming-soon">COMING SOON</div>
+  <p><strong>AI Access:</strong> 20%</p>
+  <p><strong>Features:</strong> Study Tools, Health Monitor, Budget Tier</p>
+  <p><strong>Specs:</strong> Light, Durable, 6-day Battery</p>
+</div>
+
+  </section>  <div class="countdown">
+    <p><strong>Countdown to Launch:</strong> <span id="launchTimer">Loading...</span></p>
+  </div>  <section class="waitlist">
+    <h2>Join Our Waitlist</h2>
     <input type="email" placeholder="Enter your email" />
-    <button>Join Waitlist</button>
-  </section>  <section class="section join-section">
-    <h2>Zenova Student Program 🎓</h2>
-    <input type="email" placeholder="Student Email Address" />
-    <button>Join as Student</button>
+    <button onclick="alert('Thank you for joining!')">Notify Me</button>
+  </section>  <section class="student-program">
+    <h2>Join Our Student Program</h2>
+    <p>Be among the first to explore Nova as a student ambassador.</p>
+    <button onclick="alert('Coming Soon – Stay Tuned!')">Join Now</button>
   </section>  <footer>
-    <p>© Zenova | Powered by Future — Designed & Engineered by Zaheer Baloch 🚀</p>
-  </footer>
-</body></html>
+    &copy; 2025 Zenova. All rights reserved. Built by Zaheer Baloch.
+  </footer>  <script>
+    // Countdown Timer
+    const launchDate = new Date("2025-10-01T00:00:00Z").getTime();
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const diff = launchDate - now;
+
+      if (diff <= 0) {
+        clearInterval(timer);
+        document.getElementById("launchTimer").innerText = "Launched!";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById("launchTimer").innerText =
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }, 1000);
+  </script></body>
+</html>
