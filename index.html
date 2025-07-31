@@ -1,187 +1,133 @@
-<!DOCTYPE html><html lang="en">
+    <!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zenova - Where Future Meets Space</title>
-  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Zen+Dots&family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Zen+Dots&display=swap" rel="stylesheet" />
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Orbitron', sans-serif;
-      background: radial-gradient(ellipse at bottom, #0a0a1a 0%, #000000 100%);
-      color: #ffffff;
+    }
+    body {
+      background: linear-gradient(to bottom, #000010, #050022);
+      color: #fff;
       overflow-x: hidden;
-    }header {
-  text-align: center;
-  padding: 100px 20px 60px;
-}
-
-header h1 {
-  font-family: 'Audiowide', cursive;
-  font-size: 3.7rem;
-  letter-spacing: 4px;
-  background: linear-gradient(90deg, #0ff, #8f0, #f0f, #0ff);
-  background-size: 300% 300%;
-  animation: glowText 6s ease infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-header p {
-  font-size: 1.2rem;
-  color: #ccc;
-  margin-top: 15px;
-}
-
-@keyframes glowText {
-  0%,100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-.stars {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: transparent url('https://raw.githubusercontent.com/kevin-powell/animated-background/main/stars.png') repeat;
-  animation: moveStars 120s linear infinite;
-  z-index: 0;
-}
-
-@keyframes moveStars {
-  from { background-position: 0 0; }
-  to { background-position: -8000px 4000px; }
-}
-
-.cards, .sections {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  padding: 40px 20px;
-  z-index: 1;
-  position: relative;
-}
-
-.card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  width: 290px;
-  padding: 30px 20px;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(0,255,255,0.05);
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease-in-out;
-}
-
-.card:hover {
-  transform: scale(1.04);
-  box-shadow: 0 0 30px rgba(0,255,255,0.4);
-}
-
-.card h2 {
-  color: #00ffff;
-  font-family: 'Zen Dots', cursive;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.card p {
-  color: #aaa;
-  font-size: 0.9rem;
-}
-
-.button {
-  background-color: #00ffff;
-  color: #000;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 30px;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-top: 20px;
-  transition: 0.3s;
-}
-
-.button:hover {
-  background-color: #0fffa0;
-}
-
-.holo {
-  width: 100%;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.holo img {
-  width: 300px;
-  animation: float 5s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
-.login-section {
-  text-align: center;
-  padding: 40px;
-}
-
-.login-section input[type="email"] {
-  padding: 10px;
-  width: 250px;
-  border-radius: 20px;
-  border: none;
-  margin-right: 10px;
-}
-
-.login-section .button {
-  margin-top: 0;
-}
-
-footer {
-  text-align: center;
-  padding: 40px;
-  font-size: 0.85rem;
-  color: #666;
-}
-
-@media screen and (max-width: 600px) {
-  header h1 { font-size: 2.5rem; }
-  .card { width: 90%; }
-  .holo img { width: 80%; }
-}
-
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Zen Dots', cursive;
+      font-size: 3rem;
+      color: #00ffe7;
+      text-shadow: 0 0 10px #00ffe7;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    .models-section, .student-program, .join-section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      padding: 2rem;
+      width: 250px;
+      transition: 0.3s ease;
+      position: relative;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 1rem;
+    }
+    .card h3 {
+      color: #00ffe7;
+      margin-bottom: 0.5rem;
+    }
+    .join-section button {
+      padding: 1rem 2rem;
+      background: #00ffe7;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 2rem;
+      transition: 0.3s ease;
+    }
+    .join-section button:hover {
+      background: #00e6cc;
+      box-shadow: 0 0 15px #00ffe7;
+    }
+    .popup {
+      position: fixed;
+      bottom: -100px;
+      right: 20px;
+      background: #111;
+      color: #0ff;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #0ff;
+      animation: slideup 1s forwards;
+      animation-delay: 2s;
+    }
+    @keyframes slideup {
+      to { bottom: 20px; }
+    }
   </style>
 </head>
 <body>
-  <div class="stars"></div>
   <header>
-    <h1>ZENOVA</h1>
+    <h1>Zenova</h1>
     <p>Where Future Meets Space</p>
-  </header>  <section class="cards">
-    <div class="card">
-      <h2>NOVA WATCH</h2>
-      <p>Ultra-slim AI smartwatch with satellite, offline AI, and holographic projection. Redefine time and power.</p>
+  </header>  <section class="models-section">
+    <h2>AI Showcase</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://via.placeholder.com/250x180.png?text=Nova+Watch" alt="Nova Watch" />
+        <h3>Nova Watch</h3>
+        <p>Futuristic AI-powered wearable with holographic UI and satellite link.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/250x180.png?text=Nova+Ring" alt="Nova Ring" />
+        <h3>Nova Ring</h3>
+        <p>Gesture-control ring with AI shortcuts, LED glow and haptic feedback.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/250x180.png?text=Nova+Elite" alt="Nova Elite" />
+        <h3>Nova Elite</h3>
+        <p>Founders Edition with full AI access, glow branding & premium perks.</p>
+      </div>
     </div>
-    <div class="card">
-      <h2>NOVA RING</h2>
-      <p>Gesture control, glowing LEDs, and portable AI control inside a compact futuristic ring.</p>
-    </div>
-    <div class="card">
-      <h2>NOVA ELITE</h2>
-      <p>Gold Edition. Maximum AI access. Designed for leaders of the next tech revolution.</p>
-    </div>
-  </section>  <section class="holo">
-    <h2 style="font-family: 'Zen Dots', cursive;">Hologram Projection Preview</h2>
-    <img src="https://i.ibb.co/Ykz9hPV/hologram.png" alt="Hologram AI Preview">
-  </section>  <section class="login-section">
-    <h2 style="font-family: 'Zen Dots', cursive;">Join the Beta</h2>
-    <input type="email" placeholder="Enter your email">
-    <button class="button">Join Waitlist</button>
-  </section>  <footer>
-    &copy; 2025 Zenova Technologies | Powered by Zaheer x Zenova
-  </footer>
+  </section>  <section class="student-program">
+    <h2>Zenova Student Program</h2>
+    <p>We empower students with innovation tools. Join the future with us as a Zenova Student Ambassador and build with AI and space tech.</p>
+  </section>  <section class="join-section">
+    <h2>Want Early Access?</h2>
+    <button>Join the Beta</button>
+  </section>  <div class="popup">
+    🔔 Zenova is launching soon. Be among the first to try it!
+  </div>
 </body>
 </html>
