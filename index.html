@@ -1,188 +1,148 @@
-             <!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zenova – Where Future Meets Space</title>
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+               <!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zenova — Where Future Meets Space</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
+      font-family: 'Orbitron', sans-serif;
     }body {
-  font-family: 'Inter', sans-serif;
-  background: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
   overflow-x: hidden;
-  background-image: radial-gradient(white 1px, transparent 1px), radial-gradient(white 1px, transparent 1px);
-  background-size: 20px 20px;
-  background-position: 0 0, 10px 10px;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(ellipse at bottom, #000 0%, #0b0b2b 100%);
+  background-size: cover;
+}
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent url('https://i.ibb.co/M7x2FX4/stars-bg.gif') repeat top center;
+  animation: moveStars 100s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveStars {
+  from {background-position: 0 0;}
+  to {background-position: 10000px 5000px;}
 }
 
 header {
   text-align: center;
-  padding: 60px 20px 30px;
+  padding: 100px 20px 30px;
 }
 
 h1 {
-  font-family: 'Zen Dots', cursive;
   font-size: 3rem;
-  margin-bottom: 10px;
+  background: linear-gradient(90deg, #0fffc1, #38f9d7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 2s infinite alternate;
+}
+
+@keyframes glowText {
+  from { text-shadow: 0 0 10px #0fffc1; }
+  to { text-shadow: 0 0 30px #38f9d7; }
 }
 
 .slogan {
   font-size: 1.2rem;
-  color: #bbb;
+  color: #ccc;
+  margin-top: 10px;
 }
 
 .countdown {
-  margin: 30px auto;
-  text-align: center;
-  font-size: 2rem;
-  background: rgba(255, 255, 255, 0.1);
+  margin: 40px auto;
   padding: 20px;
-  border-radius: 10px;
-  width: fit-content;
+  text-align: center;
+  font-size: 1.4rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  width: 80%;
+  max-width: 500px;
+  border: 1px solid rgba(255,255,255,0.2);
 }
 
 .countdown span {
-  margin: 0 10px;
-  font-weight: bold;
+  font-size: 2rem;
+  display: block;
+  margin: 10px 0;
 }
 
-.section {
-  padding: 60px 20px;
+.form-section, .student-section {
+  margin: 50px auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
   text-align: center;
 }
 
-.section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  font-family: 'Zen Dots';
-}
-
-.models {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  padding: 20px;
-}
-
-.model-card {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 15px;
-  transition: transform 0.3s;
-}
-
-.model-card:hover {
-  transform: translateY(-8px);
-}
-
-.model-card img {
-  width: 100%;
+.form-section input, .student-section input {
+  padding: 12px;
+  margin: 10px;
+  width: 90%;
   border-radius: 8px;
-}
-
-.model-card h3 {
-  margin-top: 10px;
-  font-family: 'Zen Dots';
-}
-
-.email-form {
-  margin-top: 40px;
-}
-
-.email-form input[type="email"] {
-  padding: 10px;
-  width: 250px;
   border: none;
-  border-radius: 5px;
+  outline: none;
+  background-color: #1c1c1c;
+  color: #fff;
 }
 
-.email-form button {
-  padding: 10px 20px;
+.form-section button, .student-section button {
+  padding: 12px 20px;
+  background-color: #0fffc1;
   border: none;
-  margin-left: 10px;
-  border-radius: 5px;
-  background-color: #00ffea;
+  color: #000;
   font-weight: bold;
-}
-
-.ai-showcase {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.ai-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 12px;
-  width: 250px;
-  transition: all 0.3s;
-}
-
-.ai-card:hover {
-  background: rgba(0, 255, 234, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 footer {
-  margin-top: 60px;
-  padding: 20px;
+  margin: 60px 0 20px;
   text-align: center;
-  color: #999;
-  font-size: 0.9rem;
+  color: #777;
 }
 
   </style>
 </head><body>
+  <div class="background">
+    <div class="stars"></div>
+  </div>
   <header>
     <h1>Zenova</h1>
     <p class="slogan">Where Future Meets Space</p>
-    <div class="countdown">
-      <span>00 : 00 : 00 : 00</span>
-      <p>Countdown Begins Soon</p>
-    </div>
-  </header>  <section class="section">
-    <h2>Our Models</h2>
-    <div class="models">
-      <div class="model-card">
-        <img src="https://via.placeholder.com/200x200?text=Nova+1" alt="Nova 1">
-        <h3>Nova 1 – Public</h3>
-      </div>
-      <div class="model-card">
-        <img src="https://via.placeholder.com/200x200?text=Hyper+Nova" alt="Hyper Nova">
-        <h3>Hyper Nova – Premium</h3>
-      </div>
-      <div class="model-card">
-        <img src="https://via.placeholder.com/200x200?text=N9-1" alt="Nova N9-1">
-        <h3>Nova N9-1 – Elite</h3>
-      </div>
-      <div class="model-card">
-        <img src="https://via.placeholder.com/200x200?text=Elite+1" alt="Founders Edition">
-        <h3>Nova Elite – Founders</h3>
-      </div>
-    </div>
-  </section>  <section class="section">
-    <h2>AI Features Showcase</h2>
-    <div class="ai-showcase">
-      <div class="ai-card">Offline AI Assistant</div>
-      <div class="ai-card">Health Sensors</div>
-      <div class="ai-card">Satellite Emergency Connect</div>
-      <div class="ai-card">Holographic Projection</div>
-    </div>
-  </section>  <section class="section">
-    <h2>Join Our Beta</h2>
-    <div class="email-form">
-      <input type="email" placeholder="Enter your email">
-      <button>Join Now</button>
-    </div>
-  </section>  <section class="section">
-    <h2>Zenova Student Program</h2>
-    <p>Are you a student with big ideas? Join the Zenova Student Program and get early access, mentorship, and innovation tools.</p>
-  </section>  <footer>
-    &copy; 2025 Zenova. All rights reserved.
+  </header>  <div class="countdown">
+    <p>Countdown Begins Soon…</p>
+    <span>00:00:00:00</span>
+  </div>  <div class="form-section">
+    <h2>Join the Beta Waitlist</h2>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <button>Register</button>
+  </div>  <div class="student-section">
+    <h2>Join Student Program</h2>
+    <input type="text" placeholder="Name">
+    <input type="email" placeholder="Email">
+    <input type="text" placeholder="Institute">
+    <button>Join Now</button>
+  </div>  <footer>
+    <p>© 2025 Zenova. All rights reserved.</p>
   </footer>
 </body></html>
