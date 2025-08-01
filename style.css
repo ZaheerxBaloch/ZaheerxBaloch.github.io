@@ -233,3 +233,49 @@ body {
   .products-section { padding: 2rem 0.3rem; }
   .product-card { padding: 0.7rem; }
 }
+// --- Features Section JS ---
+document.addEventListener("DOMContentLoaded", function () {
+  // Fade-in animation on scroll
+  const cards = document.querySelectorAll(".feature-card");
+  function animateCardsOnScroll() {
+    const winBottom = window.innerHeight + window.scrollY;
+    cards.forEach(card => {
+      const cardTop = card.getBoundingClientRect().top + window.scrollY;
+      if (winBottom > cardTop + 60) {
+        card.style.opacity = 1;
+        card.style.transform = "translateY(0)";
+        card.style.transition = "opacity 0.8s cubic-bezier(.59,.14,.41,.84), transform 0.8s cubic-bezier(.59,.14,.41,.84)";
+      }
+    });
+  }
+  animateCardsOnScroll();
+  window.addEventListener("scroll", animateCardsOnScroll);
+
+  // AI typing effect for section title
+  const titleEl = document.getElementById("features-section-title");
+  const originalTitleHTML = titleEl.innerHTML;
+  function typeTitle(text, el, speed = 48) {
+    el.innerHTML = "";
+    let i = 0;
+    function type() {
+      if (i <= text.length) {
+        el.innerHTML = `<span class="glow-text">${text.slice(0, i)}</span>`;
+        i++;
+        setTimeout(type, speed);
+      }
+    }
+    type();
+  }
+  setTimeout(() => typeTitle("Futuristic Nova Features", titleEl), 450);
+
+  // See More button toggle
+  const seeMoreBtn = document.getElementById("seeMoreBtn");
+  seeMoreBtn.addEventListener("click", () => {
+    document.querySelectorAll(".hidden-feature").forEach(el => {
+      el.style.display = el.style.display === "block" ? "none" : "block";
+      setTimeout(() => animateCardsOnScroll(), 120); // Animate after show
+    });
+    seeMoreBtn.textContent = seeMoreBtn.textContent.includes("More")
+      ? "See Less Features" : "See More Features";
+  });
+});
