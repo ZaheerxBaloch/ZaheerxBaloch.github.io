@@ -1,16 +1,70 @@
-// === Countdown Timer (for coming soon launch) === const countdown = () => { const launchDate = new Date("2025-12-01T00:00:00Z").getTime(); // adjust as needed const now = new Date().getTime(); const diff = launchDate - now;
+// Countdown (for hero or coming soon section)
+const countdown = () => {
+  const endDate = new Date("2025-12-01T00:00:00").getTime(); // Change if needed
+  const timer = document.getElementById("countdown");
 
-const days = Math.floor(diff / (1000 * 60 * 60 * 24)); const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)); const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+  if (!timer) return;
 
-document.getElementById("countdown").innerHTML = ${days}d ${hours}h ${minutes}m ${seconds}s;
+  setInterval(() => {
+    const now = new Date().getTime();
+    const gap = endDate - now;
 
-if (diff < 0) { document.getElementById("countdown").innerHTML = "We're Live!"; } }; setInterval(countdown, 1000);
+    const days = Math.floor(gap / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((gap % (1000 * 60)) / 1000);
 
-// === Smooth Scroll === document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener("click", function (e) { e.preventDefault(); document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" }); }); });
+    timer.innerHTML = `
+      <div><strong>${days}</strong> Days</div>
+      <div><strong>${hours}</strong> Hrs</div>
+      <div><strong>${minutes}</strong> Min</div>
+      <div><strong>${seconds}</strong> Sec</div>
+    `;
+  }, 1000);
+};
 
-// === Interactive Model Cards (hover animation or alert) === const modelCards = document.querySelectorAll(".model-card"); modelCards.forEach(card => { card.addEventListener("click", () => { alert("Feature details coming soon!"); }); });
+countdown();
 
-// === Hologram Effect Placeholder (future update) === // You can add WebGL / canvas / holographic effect later using Three.js or CSS animation
 
-// === Email auto-link (optional utility) === const mailLink = document.getElementById("emailLink"); if (mailLink) { mailLink.addEventListener("click", () => { window.location.href = "mailto:gokuren878@gmail.com"; }); }
+// Smooth Scroll for buttons
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
 
+
+// Simple card effect (Nova models)
+const cards = document.querySelectorAll(".model-card");
+
+cards.forEach(card => {
+  card.addEventListener("mouseover", () => {
+    card.classList.add("active");
+  });
+
+  card.addEventListener("mouseout", () => {
+    card.classList.remove("active");
+  });
+});
+
+
+// Email Trigger (when form is submitted)
+const form = document.querySelector("#student-form");
+
+if (form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = form.querySelector("#name").value;
+    const email = form.querySelector("#email").value;
+
+    // Send using mailto (for demo only, real projects should use backend/API)
+    window.location.href = `mailto:gokuren878@gmail.com?subject=Nova Student Beta&body=Name: ${name}%0D%0AEmail: ${email}`;
+
+    alert("Registration submitted successfully!");
+    form.reset();
+  });
+}
