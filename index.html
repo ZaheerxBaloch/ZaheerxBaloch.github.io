@@ -2,18 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zenova — The Future on Your Wrist</title>
-  <!-- Google Fonts: Orbitron & Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Fonts and Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Cosmic Animated Background -->
   <div id="cosmic-bg"></div>
-
   <main>
     <!-- Hero Section -->
     <section class="hero glass fade-in fantasy-border">
@@ -64,7 +61,7 @@
 
     <!-- Models Section -->
     <section class="models-section fade-in fantasy-border">
-      <h2 class="model-title fantasy-font">Nova Smartwatch Models</h2>
+      <h2 class="model-title fantasy-font">🌠 Nova Smartwatch Models</h2>
       <div class="models-grid">
         <!-- Nova 1 -->
         <div class="model-card glass luxury-glow fantasy-glow fantasy-border">
@@ -73,7 +70,7 @@
             <i class="fa-solid fa-circle" style="color:#17e717;"></i>
             <span>Nova 1 (Public)</span>
             <span class="model-status coming-soon">Coming Soon</span>
-            <span class="model-countdown">00000</span>
+            <span class="model-countdown" id="countdown-nova1"></span>
           </div>
           <ul class="model-specs">
             <li><strong>Chipset:</strong> ZenCore Lite A1</li>
@@ -96,7 +93,7 @@
             <i class="fa-solid fa-circle" style="color:#2f6eff;"></i>
             <span>Hyper Nova 1 (Premium)</span>
             <span class="model-status coming-soon">Coming Soon</span>
-            <span class="model-countdown">00000</span>
+            <span class="model-countdown" id="countdown-hypernova1"></span>
           </div>
           <ul class="model-specs">
             <li><strong>Chipset:</strong> ZenCore S2 Pro</li>
@@ -119,7 +116,7 @@
             <i class="fa-solid fa-circle" style="color:#a44efc;"></i>
             <span>Nova N9-1 (Elite)</span>
             <span class="model-status coming-soon">Coming Soon</span>
-            <span class="model-countdown">00000</span>
+            <span class="model-countdown" id="countdown-novaN9-1"></span>
           </div>
           <ul class="model-specs">
             <li><strong>Chipset:</strong> ZenCore X9 AI</li>
@@ -143,7 +140,7 @@
             <i class="fa-solid fa-circle" style="color:#ffd700;"></i>
             <span>Nova Elite 1 (Founders Edition)</span>
             <span class="model-status coming-soon">Coming Soon</span>
-            <span class="model-countdown">00000</span>
+            <span class="model-countdown" id="countdown-elite1"></span>
           </div>
           <ul class="model-specs">
             <li><strong>Chipset:</strong> ZenCore X11 Ultra</li>
@@ -163,7 +160,7 @@
         </div>
       </div>
 
-      <h2 class="model-title fantasy-font">Nova Ring Lineup</h2>
+      <h2 class="model-title fantasy-font">💍 Nova Ring Lineup</h2>
       <div class="models-grid ring-grid">
         <!-- Nova Ring Lite -->
         <div class="model-card glass luxury-glow fantasy-glow fantasy-border">
@@ -172,7 +169,7 @@
             <i class="fa-solid fa-circle" style="color:#ff7f1a;"></i>
             <span>Nova Ring Lite</span>
             <span class="model-status coming-soon">Coming Soon</span>
-            <span class="model-countdown">00000</span>
+            <span class="model-countdown" id="countdown-ringlite"></span>
           </div>
           <ul class="model-specs">
             <li><strong>Chipset:</strong> NovaRing Core M1</li>
@@ -189,7 +186,7 @@
             <i class="fa-solid fa-circle" style="color:#ffb800;"></i>
             <span>Nova Ring Standard</span>
             <span class="model-status coming-soon">Coming Soon</span>
-            <span class="model-countdown">00000</span>
+            <span class="model-countdown" id="countdown-ringstandard"></span>
           </div>
           <ul class="model-specs">
             <li><strong>Chipset:</strong> NovaRing Core M1</li>
@@ -206,7 +203,7 @@
             <i class="fa-solid fa-circle" style="color:#a44efc;"></i>
             <span>Nova Ring Glow+</span>
             <span class="model-status coming-soon">Coming Soon</span>
-            <span class="model-countdown">00000</span>
+            <span class="model-countdown" id="countdown-ringglow"></span>
           </div>
           <ul class="model-specs">
             <li><strong>Chipset:</strong> NovaRing Core M1</li>
@@ -223,7 +220,7 @@
             <i class="fa-solid fa-circle" style="color:#ffd700;"></i>
             <span>Nova Ring Elite (Gold Edition)</span>
             <span class="model-status coming-soon">Coming Soon</span>
-            <span class="model-countdown">00000</span>
+            <span class="model-countdown" id="countdown-ringelite"></span>
           </div>
           <ul class="model-specs">
             <li><strong>Chipset:</strong> NovaRing Core M1</li>
@@ -236,52 +233,22 @@
       </div>
     </section>
 
-    <!-- Pre-registration Form -->
-    <section class="pre-register glass fade-in fantasy-border" id="pre-register">
-      <h2 class="fantasy-font">Pre-register for Zenova</h2>
-      <form autocomplete="off">
-        <div class="form-group">
-          <label for="name"><i class="fa-solid fa-user"></i> Name</label>
-          <input type="text" id="name" name="name" required placeholder="Your Name">
-        </div>
-        <div class="form-group">
-          <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
-          <input type="email" id="email" name="email" required placeholder="you@email.com">
-        </div>
-        <div class="form-group">
-          <label for="model"><i class="fa-solid fa-watch-smart"></i> Model of Interest</label>
-          <select id="model" name="model" required>
-            <option value="" disabled selected>Select Model</option>
-            <option>Nova 1 (Public)</option>
-            <option>Hyper Nova 1 (Premium)</option>
-            <option>Nova N9-1 (Elite)</option>
-            <option>Nova Elite 1 (Founders Edition)</option>
-            <option>Nova Ring Lite</option>
-            <option>Nova Ring Standard</option>
-            <option>Nova Ring Glow+</option>
-            <option>Nova Ring Elite (Gold Edition)</option>
-          </select>
-        </div>
-        <button type="submit" class="btn-neon glow-hover fantasy-btn">Submit</button>
-      </form>
-    </section>
+    <!-- Footer -->
+    <footer class="footer glass fade-in fantasy-border">
+      <div class="footer-social">
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram neon-icon"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter neon-icon"></i></a>
+        <a href="https://github.com" target="_blank"><i class="fab fa-github neon-icon"></i></a>
+      </div>
+      <div class="footer-links fantasy-font">
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+      </div>
+      <div class="footer-copy fantasy-font">
+        &copy; 2025 Zenova. Engineered & Designed by <strong>Zaheer Baloch</strong>. All rights reserved.
+      </div>
+    </footer>
   </main>
-
-  <!-- Footer -->
-  <footer class="footer glass fade-in fantasy-border">
-    <div class="footer-social">
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram neon-icon"></i></a>
-      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter neon-icon"></i></a>
-      <a href="https://github.com" target="_blank"><i class="fab fa-github neon-icon"></i></a>
-    </div>
-    <div class="footer-links fantasy-font">
-      <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-    </div>
-    <div class="footer-copy fantasy-font">
-      &copy; 2025 Zenova. Engineered by Zaheer Baloch. All rights reserved.
-    </div>
-  </footer>
-
   <script src="background.js"></script>
+  <script src="countdown.js"></script>
 </body>
 </html>
