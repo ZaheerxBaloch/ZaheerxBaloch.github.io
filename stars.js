@@ -1,303 +1,287 @@
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            window.scrollTo({
-                top: target.offsetTop - 80,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zenova — The Future on Your Wrist</title>
+  <!-- Google Fonts: Orbitron & Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Cosmic Animated Background -->
+  <div id="cosmic-bg"></div>
 
-// Intersection Observer for scroll animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+  <main>
+    <!-- Hero Section -->
+    <section class="hero glass fade-in fantasy-border">
+      <div class="hero-content">
+        <img src="image1" alt="Nova Elite 1 (Founders Edition)" class="hero-img luxury-glow fantasy-glow">
+        <h1 class="neon-text fantasy-font">Zenova — The Future on Your Wrist</h1>
+        <p class="hero-subtext fantasy-font">Smartwatch & Ring Ecosystem for the Next Generation</p>
+        <a href="#pre-register" class="btn-neon fantasy-btn">Pre-register Now</a>
+      </div>
+    </section>
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
+    <!-- Features Section -->
+    <section class="features glass fade-in fantasy-border">
+      <h2 class="fantasy-font">Why Choose Zenova?</h2>
+      <div class="features-grid">
+        <div class="feature-card glass luxury-glow fantasy-glow">
+          <i class="fa-solid fa-brain fa-2x neon-icon"></i>
+          <h3 class="fantasy-font">Offline AI</h3>
+          <p>Next-gen AI runs locally for privacy and instant response, even offline.</p>
+        </div>
+        <div class="feature-card glass luxury-glow fantasy-glow">
+          <i class="fa-solid fa-satellite-dish fa-2x neon-icon"></i>
+          <h3 class="fantasy-font">Satellite Link</h3>
+          <p>Global coverage, even where phones can't reach. Stay connected anywhere.</p>
+        </div>
+        <div class="feature-card glass luxury-glow fantasy-glow">
+          <i class="fa-solid fa-bolt fa-2x neon-icon"></i>
+          <h3 class="fantasy-font">Body-heat Charging</h3>
+          <p>Never worry about charging—Zenova powers up from your own natural energy.</p>
+        </div>
+        <div class="feature-card glass luxury-glow fantasy-glow">
+          <i class="fa-solid fa-water fa-2x neon-icon"></i>
+          <h3 class="fantasy-font">Waterproof</h3>
+          <p>Built to survive cosmic storms and daily adventures. Swim, shower, explore!</p>
+        </div>
+        <div class="feature-card glass luxury-glow fantasy-glow">
+          <i class="fa-solid fa-eye fa-2x neon-icon"></i>
+          <h3 class="fantasy-font">Holographic Projection</h3>
+          <p>Project 3D notifications, time, and AI visuals directly into your space. Next-level display tech.</p>
+        </div>
+        <div class="feature-card glass luxury-glow fantasy-glow">
+          <i class="fa-solid fa-heart-pulse fa-2x neon-icon"></i>
+          <h3 class="fantasy-font">AI Health Assistant</h3>
+          <p>Intelligent health tracking, personalized coaching, and early alerts powered by advanced AI.</p>
+        </div>
+      </div>
+    </section>
 
-// Observe all feature items
-document.querySelectorAll('.feature-item').forEach(item => {
-    observer.observe(item);
-});
+    <!-- Models Section -->
+    <section class="models-section fade-in fantasy-border">
+      <h2 class="model-title fantasy-font">Nova Smartwatch Models</h2>
+      <div class="models-grid">
+        <!-- Nova 1 -->
+        <div class="model-card glass luxury-glow fantasy-glow fantasy-border">
+          <img src="image2" alt="Nova 1 (Public)" class="model-img luxury-img">
+          <div class="model-header public fantasy-font">
+            <i class="fa-solid fa-circle" style="color:#17e717;"></i>
+            <span>Nova 1 (Public)</span>
+            <span class="model-status coming-soon">Coming Soon</span>
+            <span class="model-countdown">00000</span>
+          </div>
+          <ul class="model-specs">
+            <li><strong>Chipset:</strong> ZenCore Lite A1</li>
+            <li><strong>RAM/Storage:</strong> 512MB / 4GB</li>
+            <li><strong>AI Access:</strong> 15% <div class="ai-bar" style="--percent:15;"></div></li>
+            <li><strong>Connectivity:</strong>
+              <i class="fa-solid fa-bluetooth"></i> Bluetooth LE,
+              <i class="fa-solid fa-satellite-dish"></i> Satellite Ping (limited),
+              <i class="fa-solid fa-wifi"></i> WiFi
+            </li>
+            <li><strong>Charging:</strong> <i class="fa-solid fa-fire"></i> Body Heat + <i class="fa-solid fa-plug"></i> USB-C backup</li>
+            <li><strong>Features:</strong> Basic Health Sensors, Emergency Satellite Ping, Limited AI</li>
+            <li><strong>OS:</strong> Zenova OS Lite</li>
+          </ul>
+        </div>
+        <!-- Hyper Nova 1 -->
+        <div class="model-card glass luxury-glow fantasy-glow fantasy-border">
+          <img src="image4" alt="Hyper Nova 1 (Premium)" class="model-img luxury-img">
+          <div class="model-header premium fantasy-font">
+            <i class="fa-solid fa-circle" style="color:#2f6eff;"></i>
+            <span>Hyper Nova 1 (Premium)</span>
+            <span class="model-status coming-soon">Coming Soon</span>
+            <span class="model-countdown">00000</span>
+          </div>
+          <ul class="model-specs">
+            <li><strong>Chipset:</strong> ZenCore S2 Pro</li>
+            <li><strong>RAM/Storage:</strong> 1GB / 8GB</li>
+            <li><strong>AI Access:</strong> 40% <div class="ai-bar" style="--percent:40;"></div></li>
+            <li><strong>Connectivity:</strong>
+              <i class="fa-solid fa-bluetooth"></i> Dual-Bluetooth,
+              <i class="fa-solid fa-satellite"></i> Satellite LiveSync,
+              <i class="fa-solid fa-wifi"></i> WiFi
+            </li>
+            <li><strong>Charging:</strong> <i class="fa-solid fa-fire"></i> Body Heat + <i class="fa-solid fa-sun"></i> Fast Solar</li>
+            <li><strong>Features:</strong> Advanced Health Metrics, Mood-based UI, App Plugins</li>
+            <li><strong>OS:</strong> Zenova OS Core</li>
+          </ul>
+        </div>
+        <!-- Nova N9-1 -->
+        <div class="model-card glass luxury-glow fantasy-glow fantasy-border">
+          <img src="image3" alt="Nova N9-1 (Elite)" class="model-img luxury-img">
+          <div class="model-header elite fantasy-font">
+            <i class="fa-solid fa-circle" style="color:#a44efc;"></i>
+            <span>Nova N9-1 (Elite)</span>
+            <span class="model-status coming-soon">Coming Soon</span>
+            <span class="model-countdown">00000</span>
+          </div>
+          <ul class="model-specs">
+            <li><strong>Chipset:</strong> ZenCore X9 AI</li>
+            <li><strong>RAM/Storage:</strong> 2GB / 16GB</li>
+            <li><strong>AI Access:</strong> 70% <div class="ai-bar" style="--percent:70;"></div></li>
+            <li><strong>Connectivity:</strong>
+              <i class="fa-solid fa-satellite-dish"></i> Satellite Real-Time,
+              <i class="fa-solid fa-bluetooth"></i> Dual BT,
+              <i class="fa-solid fa-wifi"></i> WiFi,
+              <span class="nova-link">Nova Link</span>
+            </li>
+            <li><strong>Charging:</strong> <i class="fa-solid fa-fire"></i> Body Heat + <i class="fa-solid fa-sun"></i> Solar + <i class="fa-solid fa-magnet"></i> Magnetic Dock</li>
+            <li><strong>Features:</strong> Hologram Preview, AI Personality, Full Plugin Access</li>
+            <li><strong>OS:</strong> Zenova OS Prime</li>
+          </ul>
+        </div>
+        <!-- Nova Elite 1 -->
+        <div class="model-card glass luxury-glow fantasy-glow fantasy-border">
+          <img src="image1" alt="Nova Elite 1 (Founders Edition)" class="model-img luxury-img">
+          <div class="model-header founders fantasy-font">
+            <i class="fa-solid fa-circle" style="color:#ffd700;"></i>
+            <span>Nova Elite 1 (Founders Edition)</span>
+            <span class="model-status coming-soon">Coming Soon</span>
+            <span class="model-countdown">00000</span>
+          </div>
+          <ul class="model-specs">
+            <li><strong>Chipset:</strong> ZenCore X11 Ultra</li>
+            <li><strong>RAM/Storage:</strong> 3GB / 32GB</li>
+            <li><strong>AI Access:</strong> 100% <div class="ai-bar" style="--percent:100;"></div></li>
+            <li><strong>Connectivity:</strong>
+              <i class="fa-solid fa-satellite"></i> Satellite MeshNet,
+              <span class="quantum-link">QuantumSecure Link</span>,
+              <span class="nova-link">Nova Link</span>,
+              <i class="fa-solid fa-bluetooth"></i> Dual BT,
+              <i class="fa-solid fa-wifi"></i> WiFi
+            </li>
+            <li><strong>Charging:</strong> <i class="fa-solid fa-fire"></i> Heat + <i class="fa-solid fa-sun"></i> Solar + <i class="fa-solid fa-magnet"></i> Dock + <i class="fa-solid fa-wind"></i> Wireless Air</li>
+            <li><strong>Features:</strong> Holographic Projection, AI Memory Mode, Nova Store Full Access, Gold-Layer Casing</li>
+            <li><strong>OS:</strong> Zenova OS Elite (Encrypted)</li>
+          </ul>
+        </div>
+      </div>
 
-// Observe all product cards
-document.querySelectorAll('.product-card').forEach(card => {
-    observer.observe(card);
-});
+      <h2 class="model-title fantasy-font">Nova Ring Lineup</h2>
+      <div class="models-grid ring-grid">
+        <!-- Nova Ring Lite -->
+        <div class="model-card glass luxury-glow fantasy-glow fantasy-border">
+          <img src="image6" alt="Nova Ring Lite" class="model-img luxury-img">
+          <div class="model-header ring-lite fantasy-font">
+            <i class="fa-solid fa-circle" style="color:#ff7f1a;"></i>
+            <span>Nova Ring Lite</span>
+            <span class="model-status coming-soon">Coming Soon</span>
+            <span class="model-countdown">00000</span>
+          </div>
+          <ul class="model-specs">
+            <li><strong>Chipset:</strong> NovaRing Core M1</li>
+            <li><strong>Connectivity:</strong> <i class="fa-solid fa-bluetooth"></i> BLE 5.2</li>
+            <li><strong>Sensors:</strong> <i class="fa-solid fa-hand-pointer"></i> Gesture Motion, <i class="fa-solid fa-temperature-half"></i> Temp, <i class="fa-solid fa-fingerprint"></i> Tap</li>
+            <li><strong>Battery:</strong> <i class="fa-solid fa-fire"></i> Micro-cell Heat Cell (5-day avg), <i class="fa-solid fa-plug"></i> USB-C backup</li>
+            <li><strong>Features:</strong> LED Glow, Basic Gestures, Phone Sync Only</li>
+          </ul>
+        </div>
+        <!-- Nova Ring Standard -->
+        <div class="model-card glass luxury-glow fantasy-glow fantasy-border">
+          <img src="image8" alt="Nova Ring Standard" class="model-img luxury-img">
+          <div class="model-header ring-standard fantasy-font">
+            <i class="fa-solid fa-circle" style="color:#ffb800;"></i>
+            <span>Nova Ring Standard</span>
+            <span class="model-status coming-soon">Coming Soon</span>
+            <span class="model-countdown">00000</span>
+          </div>
+          <ul class="model-specs">
+            <li><strong>Chipset:</strong> NovaRing Core M1</li>
+            <li><strong>Connectivity:</strong> <i class="fa-solid fa-bluetooth"></i> BLE 5.2</li>
+            <li><strong>Sensors:</strong> <i class="fa-solid fa-hand-pointer"></i> Gesture Motion, <i class="fa-solid fa-temperature-half"></i> Temp, <i class="fa-solid fa-fingerprint"></i> Tap</li>
+            <li><strong>Battery:</strong> <i class="fa-solid fa-fire"></i> Micro-cell Heat Cell (5-day avg), <i class="fa-solid fa-plug"></i> USB-C backup</li>
+            <li><strong>Features:</strong> Enhanced Gestures, Nova Watch AI Control, Dynamic Alerts</li>
+          </ul>
+        </div>
+        <!-- Nova Ring Glow+ -->
+        <div class="model-card glass luxury-glow fantasy-glow fantasy-border">
+          <img src="image5" alt="Nova Ring Glow+" class="model-img luxury-img">
+          <div class="model-header ring-glow fantasy-font">
+            <i class="fa-solid fa-circle" style="color:#a44efc;"></i>
+            <span>Nova Ring Glow+</span>
+            <span class="model-status coming-soon">Coming Soon</span>
+            <span class="model-countdown">00000</span>
+          </div>
+          <ul class="model-specs">
+            <li><strong>Chipset:</strong> NovaRing Core M1</li>
+            <li><strong>Connectivity:</strong> <i class="fa-solid fa-bluetooth"></i> BLE 5.2</li>
+            <li><strong>Sensors:</strong> <i class="fa-solid fa-hand-pointer"></i> Gesture Motion, <i class="fa-solid fa-temperature-half"></i> Temp, <i class="fa-solid fa-fingerprint"></i> Tap</li>
+            <li><strong>Battery:</strong> <i class="fa-solid fa-fire"></i> Micro-cell Heat Cell (5-day avg), <i class="fa-solid fa-plug"></i> USB-C backup</li>
+            <li><strong>Features:</strong> Custom LED Color, Logo/Name Display, Gesture Memory</li>
+          </ul>
+        </div>
+        <!-- Nova Ring Elite (Gold Edition) -->
+        <div class="model-card glass luxury-glow fantasy-glow fantasy-border">
+          <img src="image7" alt="Nova Ring Elite (Gold Edition)" class="model-img luxury-img">
+          <div class="model-header ring-elite fantasy-font">
+            <i class="fa-solid fa-circle" style="color:#ffd700;"></i>
+            <span>Nova Ring Elite (Gold Edition)</span>
+            <span class="model-status coming-soon">Coming Soon</span>
+            <span class="model-countdown">00000</span>
+          </div>
+          <ul class="model-specs">
+            <li><strong>Chipset:</strong> NovaRing Core M1</li>
+            <li><strong>Connectivity:</strong> <i class="fa-solid fa-bluetooth"></i> BLE 5.2</li>
+            <li><strong>Sensors:</strong> <i class="fa-solid fa-hand-pointer"></i> Gesture Motion, <i class="fa-solid fa-temperature-half"></i> Temp, <i class="fa-solid fa-fingerprint"></i> Tap</li>
+            <li><strong>Battery:</strong> <i class="fa-solid fa-fire"></i> Micro-cell Heat Cell (5-day avg), <i class="fa-solid fa-plug"></i> USB-C backup</li>
+            <li><strong>Features:</strong> 24K Gold Plating, Lifetime Glow Customization, 6-Month App Elite Pass</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-// Observe all security cards
-document.querySelectorAll('.security-card').forEach(card => {
-    observer.observe(card);
-});
+    <!-- Pre-registration Form -->
+    <section class="pre-register glass fade-in fantasy-border" id="pre-register">
+      <h2 class="fantasy-font">Pre-register for Zenova</h2>
+      <form autocomplete="off">
+        <div class="form-group">
+          <label for="name"><i class="fa-solid fa-user"></i> Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+          <input type="email" id="email" name="email" required placeholder="you@email.com">
+        </div>
+        <div class="form-group">
+          <label for="model"><i class="fa-solid fa-watch-smart"></i> Model of Interest</label>
+          <select id="model" name="model" required>
+            <option value="" disabled selected>Select Model</option>
+            <option>Nova 1 (Public)</option>
+            <option>Hyper Nova 1 (Premium)</option>
+            <option>Nova N9-1 (Elite)</option>
+            <option>Nova Elite 1 (Founders Edition)</option>
+            <option>Nova Ring Lite</option>
+            <option>Nova Ring Standard</option>
+            <option>Nova Ring Glow+</option>
+            <option>Nova Ring Elite (Gold Edition)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-neon glow-hover fantasy-btn">Submit</button>
+      </form>
+    </section>
+  </main>
 
-// Form submission handling
-const studentForm = document.getElementById('student-form');
-if (studentForm) {
-    studentForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const formData = new FormData(studentForm);
-        const submitButton = studentForm.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
-        
-        try {
-            // Show loading state
-            submitButton.disabled = true;
-            submitButton.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
-            
-            // Simulate form submission (replace with actual fetch in production)
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            
-            // Show success message
-            submitButton.innerHTML = '<i class="fas fa-check"></i> Success!';
-            studentForm.reset();
-            
-            // Create and show success notification
-            const notification = document.createElement('div');
-            notification.className = 'form-notification success';
-            notification.innerHTML = `
-                <i class="fas fa-check-circle"></i>
-                <span>Thank you for registering! We'll contact you soon.</span>
-            `;
-            studentForm.appendChild(notification);
-            
-            // Remove notification after delay
-            setTimeout(() => {
-                notification.style.opacity = '0';
-                setTimeout(() => notification.remove(), 300);
-            }, 3000);
-        } catch (error) {
-            // Show error message
-            submitButton.innerHTML = '<i class="fas fa-times"></i> Error';
-            
-            // Create and show error notification
-            const notification = document.createElement('div');
-            notification.className = 'form-notification error';
-            notification.innerHTML = `
-                <i class="fas fa-exclamation-circle"></i>
-                <span>Something went wrong. Please try again.</span>
-            `;
-            studentForm.appendChild(notification);
-            
-            // Remove notification after delay
-            setTimeout(() => {
-                notification.style.opacity = '0';
-                setTimeout(() => notification.remove(), 300);
-            }, 3000);
-        } finally {
-            // Reset button after delay
-            setTimeout(() => {
-                submitButton.disabled = false;
-                submitButton.textContent = originalText;
-            }, 2000);
-        }
-    });
-}
+  <!-- Footer -->
+  <footer class="footer glass fade-in fantasy-border">
+    <div class="footer-social">
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram neon-icon"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter neon-icon"></i></a>
+      <a href="https://github.com" target="_blank"><i class="fab fa-github neon-icon"></i></a>
+    </div>
+    <div class="footer-links fantasy-font">
+      <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </div>
+    <div class="footer-copy fantasy-font">
+      &copy; 2025 Zenova. Engineered by Zaheer Baloch. All rights reserved.
+    </div>
+  </footer>
 
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        const scrollPosition = window.pageYOffset;
-        hero.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
-    }
-});
-
-// Mobile menu toggle (add this HTML to your header)
-const mobileMenuButton = document.createElement('button');
-mobileMenuButton.className = 'mobile-menu-button';
-mobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
-mobileMenuButton.setAttribute('aria-label', 'Toggle menu');
-
-const headerContainer = document.querySelector('.header-container');
-if (headerContainer) {
-    headerContainer.appendChild(mobileMenuButton);
-    
-    const nav = document.querySelector('nav');
-    mobileMenuButton.addEventListener('click', () => {
-        nav.classList.toggle('active');
-        mobileMenuButton.innerHTML = nav.classList.contains('active') 
-            ? '<i class="fas fa-times"></i>' 
-            : '<i class="fas fa-bars"></i>';
-    });
-}
-
-// Add hover effect to AI level cards
-document.querySelectorAll('.ai-level').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        const percent = card.querySelector('.ai-level-percent');
-        if (percent) {
-            percent.style.transform = 'scale(1.1)';
-        }
-    });
-    
-    card.addEventListener('mouseleave', () => {
-        const percent = card.querySelector('.ai-level-percent');
-        if (percent) {
-            percent.style.transform = 'scale(1)';
-        }
-    });
-});
-
-// Dynamic year in footer
-const yearElement = document.createElement('span');
-yearElement.textContent = new Date().getFullYear();
-document.querySelector('.footer-bottom').innerHTML = `© ${yearElement.textContent} Zenova. Designed by Zaheer Baloch`;
-
-// Add some additional styles via JavaScript
-const dynamicStyles = document.createElement('style');
-dynamicStyles.textContent = `
-    .form-notification {
-        position: fixed;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 15px 25px;
-        border-radius: 50px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 0.9rem;
-        opacity: 0;
-        animation: fadeIn 0.3s forwards;
-        z-index: 1000;
-    }
-    
-    .form-notification.success {
-        background: rgba(40, 167, 69, 0.9);
-        color: white;
-    }
-    
-    .form-notification.error {
-        background: rgba(220, 53, 69, 0.9);
-        color: white;
-    }
-    
-    @keyframes fadeIn {
-        to { opacity: 1; bottom: 30px; }
-    }
-    
-    .mobile-menu-button {
-        display: none;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-        padding: 0.5rem;
-    }
-    
-    @media (max-width: 768px) {
-        .mobile-menu-button {
-            display: block;
-        }
-        
-        nav ul {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            padding: 1rem 0;
-        }
-        
-        nav.active ul {
-            display: flex;
-        }
-    }
-    
-    /* Glow animation for special elements */
-    .glow {
-        animation: glowPulse 2s infinite alternate;
-    }
-    
-    @keyframes glowPulse {
-        from { box-shadow: 0 0 5px rgba(110, 69, 226, 0.5); }
-        to { box-shadow: 0 0 20px rgba(110, 69, 226, 0.8); }
-    }
-`;
-document.head.appendChild(dynamicStyles);
-
-// Add glow effect to beta button
-const betaButton = document.querySelector('.btn-beta');
-if (betaButton) {
-    betaButton.classList.add('glow');
-}
-
-// Product card hover animation enhancement
-document.querySelectorAll('.product-card').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const angleX = (y - centerY) / 20;
-        const angleY = (centerX - x) / 20;
-        
-        card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
-    });
-    
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
-    });
-});
-
-// Lazy loading for images
-document.addEventListener('DOMContentLoaded', () => {
-    const lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
-    
-    if ('IntersectionObserver' in window) {
-        const lazyImageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const lazyImage = entry.target;
-                    lazyImage.src = lazyImage.dataset.src;
-                    lazyImage.classList.remove('lazy');
-                    lazyImageObserver.unobserve(lazyImage);
-                }
-            });
-        });
-        
-        lazyImages.forEach(lazyImage => {
-            lazyImageObserver.observe(lazyImage);
-        });
-    }
-});
-
-// Add a scroll progress indicator
-const progressBar = document.createElement('div');
-progressBar.className = 'scroll-progress';
-document.body.appendChild(progressBar);
-
-window.addEventListener('scroll', () => {
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    progressBar.style.width = `${scrolled}%`;
-});
-
-// Add styles for scroll progress
-const progressStyles = document.createElement('style');
-progressStyles.textContent = `
-    .scroll-progress {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 4px;
-        background: linear-gradient(90deg, var(--primary), var(--accent));
-        z-index: 1000;
-        width: 0%;
-        transition: width 0.1s ease;
-    }
-`;
-document.head.appendChild(progressStyles);
+  <script src="background.js"></script>
+</body>
+</html>
