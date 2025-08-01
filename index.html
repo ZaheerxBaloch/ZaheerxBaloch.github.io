@@ -1,141 +1,73 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html><html lang="en">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zenova - Future of Smart Tech</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Orbitron', sans-serif;
-    }body {
-  background: url('https://www.shutterstock.com/image-vector/space-background-vector-nebula-stars-260nw-2200955765.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: white;
-  scroll-behavior: smooth;
-}
-
-header {
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-.logo {
-  font-size: 3rem;
-  color: #0ff;
-  text-shadow: 0 0 10px #0ff;
-  animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px #0ff;
-  }
-
-  to {
-    text-shadow: 0 0 25px #0ff, 0 0 30px #0ff;
-  }
-}
-
-.tagline {
-  font-size: 1.3rem;
-  color: #ccc;
-  margin-top: 0.5rem;
-}
-
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-}
-
-.product-card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1rem;
-  border-radius: 10px;
-  text-align: center;
-  backdrop-filter: blur(5px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #0ff;
-}
-
-.product-card img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.5rem 1.5rem;
-  border: 2px solid #0ff;
-  background: transparent;
-  color: #0ff;
-  border-radius: 30px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 0.3s, color 0.3s;
-}
-
-.btn:hover {
-  background: #0ff;
-  color: black;
-}
-
-.student-section {
-  text-align: center;
-  padding: 2rem;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #888;
-}
-
-  </style>
-</head><body>
-  <header>
-    <div class="logo">ZENOVA</div>
-    <p class="tagline">Where the Future Meets Space</p>
-  </header>  <section class="products">
-    <div class="product-card">
-      <img src="Nova%201.jpg" alt="Nova 1">
-      <h3>Nova 1</h3>
-      <p>Entry-level smart AI watch for everyone</p>
-      <a href="#" class="btn">Coming Soon</a>
+  <title>Zenova – The Future Is Now</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="overlay">
+      <h1 class="glow-text">Zenova – The Future Is Now</h1>
+      <p class="sub">Join the Next Era of Smart AI Tech</p>
+      <a href="https://forms.gle/yourformlink" target="_blank" class="btn">JOIN BETA</a>
     </div>
-    <div class="product-card">
-      <img src="Hyper%20Nova%201.jpg" alt="Hyper Nova 1">
-      <h3>Hyper Nova 1</h3>
-      <p>Premium Nova experience with double power</p>
-      <a href="#" class="btn">Coming Soon</a>
+  </section>  <!-- Products Section -->  <section class="products">
+    <h2 class="section-title">Nova Smartwatch Series</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <h3>Nova 1</h3>
+        <ul>
+          <li>AI Access: 15%</li>
+          <li>Charging: Body Heat</li>
+          <li>Waterproof: Basic</li>
+          <li>Membership: Free</li>
+          <li>App Store: Limited</li>
+        </ul>
+        <p class="coming">Coming Soon</p>
+      </div>
+      <div class="product-card">
+        <h3>Hyper Nova 1</h3>
+        <ul>
+          <li>AI Access: 40%</li>
+          <li>Charging: Solar + Heat</li>
+          <li>Waterproof: Advanced</li>
+          <li>Membership: Premium</li>
+          <li>App Store: Partial</li>
+        </ul>
+        <p class="coming">Coming Soon</p>
+      </div>
+      <div class="product-card">
+        <h3>Nova N9 1</h3>
+        <ul>
+          <li>AI Access: 70%</li>
+          <li>Charging: Dual Source</li>
+          <li>Waterproof: Deep</li>
+          <li>Membership: Elite</li>
+          <li>App Store: Full</li>
+        </ul>
+        <p class="coming">Coming Soon</p>
+      </div>
+      <div class="product-card">
+        <h3>Nova Elite 1</h3>
+        <ul>
+          <li>AI Access: 100%</li>
+          <li>Charging: Solar + Heat + Backup</li>
+          <li>Waterproof: Max</li>
+          <li>Membership: Founders Edition</li>
+          <li>App Store: All Access</li>
+        </ul>
+        <p class="coming">Coming Soon</p>
+      </div>
     </div>
-    <div class="product-card">
-      <img src="Nova%20Elite%201.jpg" alt="Nova Elite 1">
-      <h3>Nova Elite 1</h3>
-      <p>Founders edition with lifetime AI perks</p>
-      <a href="#" class="btn">Coming Soon</a>
-    </div>
-    <div class="product-card">
-      <img src="Nova%20N9%201.jpg" alt="Nova N9 1">
-      <h3>Nova N9-1</h3>
-      <p>Elite offline AI with satellite power</p>
-      <a href="#" class="btn">Coming Soon</a>
-    </div>
-  </section>  <section class="student-section">
-    <h2>Student Innovation Program</h2>
-    <p>Want to be part of Zenova and innovate with us?</p>
-    <a class="btn" href="mailto:gokuren878@gmail.com?subject=Student Program Application">Join Now</a>
-  </section>  <footer>
-    Created with 💡 by Zaheer Baloch
+  </section>  <!-- Student Program -->  <section class="student">
+    <h2>Zenova Student Program</h2>
+    <p>Join as an early innovator and be part of the future tech revolution.</p>
+    <a href="mailto:gokuren878@gmail.com" class="btn">Apply Now</a>
+  </section>  <!-- Footer -->  <footer>
+    <p>Made by Zaheer Baloch | Zenova © 2025</p>
   </footer>
-</body></html>
+</body>
+</html>
