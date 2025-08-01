@@ -1,38 +1,16 @@
-const canvas = document.getElementById("stars");
-const ctx = canvas.getContext("2d");
+// === Countdown Timer (for coming soon launch) === const countdown = () => { const launchDate = new Date("2025-12-01T00:00:00Z").getTime(); // adjust as needed const now = new Date().getTime(); const diff = launchDate - now;
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+const days = Math.floor(diff / (1000 * 60 * 60 * 24)); const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)); const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-const stars = [];
+document.getElementById("countdown").innerHTML = ${days}d ${hours}h ${minutes}m ${seconds}s;
 
-for (let i = 0; i < 200; i++) {
-  stars.push({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    size: Math.random() * 2,
-    speed: Math.random() * 0.5 + 0.2
-  });
-}
+if (diff < 0) { document.getElementById("countdown").innerHTML = "We're Live!"; } }; setInterval(countdown, 1000);
 
-function drawStars() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = "#ffffff";
-  stars.forEach(star => {
-    ctx.beginPath();
-    ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
-    ctx.fill();
-    star.y += star.speed;
-    if (star.y > canvas.height) {
-      star.y = 0;
-      star.x = Math.random() * canvas.width;
-    }
-  });
-}
+// === Smooth Scroll === document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener("click", function (e) { e.preventDefault(); document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" }); }); });
 
-setInterval(drawStars, 50);
+// === Interactive Model Cards (hover animation or alert) === const modelCards = document.querySelectorAll(".model-card"); modelCards.forEach(card => { card.addEventListener("click", () => { alert("Feature details coming soon!"); }); });
 
-window.addEventListener("resize", () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-});
+// === Hologram Effect Placeholder (future update) === // You can add WebGL / canvas / holographic effect later using Three.js or CSS animation
+
+// === Email auto-link (optional utility) === const mailLink = document.getElementById("emailLink"); if (mailLink) { mailLink.addEventListener("click", () => { window.location.href = "mailto:gokuren878@gmail.com"; }); }
+
