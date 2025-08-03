@@ -411,12 +411,37 @@ section {
 
 .footer-bottom {
     text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    color: #ccc;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.4);
+    font-family: 'Space Grotesk', sans-serif;
 }
 
+.footer-bottom p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.nova-glow {
+    color: #00ffe1;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px #00ffe1a9;
+}
+
+.zenova-glow {
+    color: #ff7af0;
+    font-weight: 500;
+    text-shadow: 0 0 6px #ff7af088;
+}
+
+.zaheer-glow {
+    color: #ffcb05;
+    font-weight: 500;
+    text-shadow: 0 0 6px #ffcb05aa;
+}
 /* Animations */
 @keyframes pulse {
     0% {
