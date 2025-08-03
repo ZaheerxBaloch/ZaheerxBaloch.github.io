@@ -182,6 +182,20 @@ section {
     margin-bottom: 40px;
     color: rgba(255, 255, 255, 0.8);
 }
+.product-img-single {
+    width: 100%;
+    max-width: 400px;  /* limits size on big screens */
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: contain;  /* ensures image doesn’t stretch */
+}
+
+.product-img-single:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.4);
+}
 
 /* Buttons */
 .cta-button {
