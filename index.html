@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zenova Universe</title>
+  <link rel="stylesheet" href="entry.css" />
+  <script src="entry.js" defer></script>
+</head>
+<body>
+  <div class="enter-btn-wrapper">
+    <button class="enter-btn" onclick="showAuth()">Enter Zenova Universe</button>
+  </div>
+
+  <div id="authModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Welcome to Zenova</h2>
+      <p>Explore the future of AI & Space Tech</p>
+      <button class="auth-btn" onclick="redirectToSignup()">Sign In / Sign Up</button>
+      <button class="close-btn" onclick="closeAuth()">X</button>
+    </div>
+  </div>
+</body>
+</html>
