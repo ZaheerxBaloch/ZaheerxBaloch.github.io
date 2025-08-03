@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zenova Universe</title>
+  <title>Zenova Universe - Enter</title>
   <link rel="stylesheet" href="entry.css" />
-  <script src="entry.js" defer></script>
 </head>
 <body>
-  <div class="enter-btn-wrapper">
-    <button class="enter-btn" onclick="showAuth()">Enter Zenova Universe</button>
+  <div class="entry-container">
+    <div class="logo">🌌 Zenova Universe</div>
+    <div class="subtitle">Where Future Meets Space</div>
+    
+    <div class="button-group">
+      <a href="home.html" class="vip-button">🚀 Enter Website</a>
+      <a href="dashboard.html" class="auth-button">✨ Create Account</a>
+    </div>
+    
+    <div class="stars-bg"></div>
   </div>
 
-  <div id="authModal" class="modal hidden">
-    <div class="modal-content">
-      <h2>Welcome to Zenova</h2>
-      <p>Explore the future of AI & Space Tech</p>
-      <button class="auth-btn" onclick="redirectToSignup()">Sign In / Sign Up</button>
-      <button class="close-btn" onclick="closeAuth()">X</button>
-    </div>
-  </div>
+  <script src="entry.js" defer></script>
 </body>
 </html>
