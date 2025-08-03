@@ -397,10 +397,16 @@ section {
     transition: all 0.3s ease;
 }
 
+.footer-social a {
+    color: white;
+    font-size: 20px;
+    margin: 0 12px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
 .footer-social a:hover {
-    background-color: var(--primary);
-    color: var(--dark);
-    transform: translateY(-3px);
+    transform: scale(1.2);
+    color: #00ffff;
 }
 
 .footer-bottom {
