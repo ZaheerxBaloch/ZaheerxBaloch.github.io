@@ -4,40 +4,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nova Dashboard</title>
   <link rel="stylesheet" href="dashboard.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<script src="dashboard.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="dashboard-container">
-    <aside class="sidebar">
-      <h2>Nova Admin</h2>
-      <nav>
-        <a href="#overview"><i class="fas fa-chart-line"></i> Overview</a>
-        <a href="#products"><i class="fas fa-box"></i> Products</a>
-        <a href="#ring"><i class="fas fa-ring"></i> Ring</a>
-        <a href="#users"><i class="fas fa-users"></i> Users</a>
-        <a href="#settings"><i class="fas fa-cog"></i> Settings</a>
-      </nav>
-    </aside>
-    <main class="main-content">
-      <header>
-        <h1>Welcome, Admin</h1>
-      </header>
-      <section class="cards">
-        <div class="card">
-          <h3>Pre-orders</h3>
-          <p>1,250+</p>
-        </div>
-        <div class="card">
-          <h3>AI Access %</h3>
-          <p>70% Elite Users</p>
-        </div>
-        <div class="card">
-          <h3>Feedback</h3>
-          <p>4.8 ★</p>
-        </div>
-      </section>
-    </main>
-  </div>
-</body>
+  <div class="sidebar">
+    <h2>NOVA</h2>
+    <ul>
+      <li data-target="users">Users</li>
+      <li data-target="analytics">Analytics</li>
+      <li data-target="settings">Settings</li>
+    </ul>
+  </div>  <div class="main">
+    <div class="card users">
+      <h3>User Management</h3>
+      <p>Total Users: 1,205</p>
+    </div><div class="card analytics">
+  <h3>Analytics</h3>
+  <p>Website Visits: 10,532</p>
+</div>
+
+<div class="card settings">
+  <h3>Settings</h3>
+  <p>Customize your experience.</p>
+</div>
+
+  </div>  <script src="dashboard.js"></script></body>
 </html>
