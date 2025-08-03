@@ -1,117 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nova — Beyond Time</title>
-  <link rel="stylesheet" href="style.css"/>
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA | The Future on Your Wrist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">NOVA</span>
+                <span class="logo-dot"></span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="#join" class="nav-link">Join Us</a>
+            </div>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-<!-- SECTION: Background Video -->
-<video autoplay muted loop id="bg-video">
-  <source src="assets/bg-video.mp4" type="video/mp4">
-</video>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">EXPERIENCE THE FUTURE</h1>
+                <p class="hero-subtitle">Smart technology meets cosmic design</p>
+                <a href="#features" class="cta-button">Explore Features</a>
+            </div>
+        </div>
+    </section>
 
-<!-- SECTION: Navbar -->
-<header class="navbar">
-  <img src="assets/logo.png" alt="Nova Logo" class="logo"/>
-  <nav>
-    <a href="#features">Features</a>
-    <a href="#models">Models</a>
-    <a href="#ring">Nova Ring</a>
-    <a href="#register">Register</a>
-    <a href="#join">Community</a>
-  </nav>
-  <button id="toggle-theme">☀️</button>
-</header>
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">UNMATCHED TECHNOLOGY</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⌚</div>
+                    <h3>Quantum Sync</h3>
+                    <p>Instant connection with all your devices using quantum entanglement technology</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Nova Core</h3>
+                    <p>Our proprietary processor delivers unmatched performance with minimal power</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌌</div>
+                    <h3>Cosmic UI</h3>
+                    <p>Holographic interface that adapts to your environment and preferences</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- SECTION: Hero -->
-<section class="hero">
-  <h1 class="glow">Beyond Time.<br/>Welcome to the Nova Era.</h1>
-  <p>The future on your wrist, powered by AI.</p>
-  <a href="#register" class="btn">Pre-Register Now</a>
-</section>
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">OUR COLLECTION</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image" style="background-color: #1a1a2e;"></div>
+                    <h3>NOVA X1</h3>
+                    <p>The flagship model with all premium features</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background-color: #16213e;"></div>
+                    <h3>NOVA S</h3>
+                    <p>Sleek design with essential smart features</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background-color: #0f3460;"></div>
+                    <h3>NOVA Pro</h3>
+                    <p>Professional grade for extreme conditions</p>
+                </div>
+            </div>
+            <a href="products.html" class="cta-button outline">See All Products</a>
+        </div>
+    </section>
 
-<!-- SECTION: Features -->
-<section id="features" class="section features">
-  <h2 class="section-title">Nova Features</h2>
-  <div class="card-grid">
-    <div class="card">Offline AI Engine</div>
-    <div class="card">Satellite Connectivity</div>
-    <div class="card">Heat & Solar Charging</div>
-    <div class="card">Holographic Projection</div>
-  </div>
-</section>
+    <!-- Join Us Section -->
+    <section id="join" class="join">
+        <div class="container">
+            <h2 class="section-title">JOIN THE NOVA UNIVERSE</h2>
+            <p class="join-subtitle">Be the first to experience our latest innovations</p>
+            <form class="join-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="cta-button">Subscribe</button>
+            </form>
+        </div>
+    </section>
 
-<!-- SECTION: Product Models -->
-<section id="models" class="section models">
-  <h2 class="section-title">Choose Your Nova</h2>
-  <div class="model-grid">
-    <div class="model-card">
-      <img src="assets/nova1.png" alt="Nova 1"/>
-      <h3>Nova 1</h3>
-      <p>Smart. Accessible. For everyone.</p>
-    </div>
-    <div class="model-card">
-      <img src="assets/nova2.png" alt="Hyper Nova 1"/>
-      <h3>Hyper Nova 1</h3>
-      <p>Powerful AI & premium design.</p>
-    </div>
-    <div class="model-card">
-      <img src="assets/nova3.png" alt="Nova N9-1"/>
-      <h3>Nova N9-1</h3>
-      <p>Elite tier for creators & visionaries.</p>
-    </div>
-    <div class="model-card">
-      <img src="assets/nova4.png" alt="Nova Elite 1"/>
-      <h3>Nova Elite 1</h3>
-      <p>Founders Edition. 100% AI Access.</p>
-    </div>
-  </div>
-</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-text">NOVA</span>
+                        <span class="logo-dot"></span>
+                    </a>
+                    <p>The Future on Your Wrist</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Support</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="Instagram">📸</a>
+                    <a href="#" aria-label="YouTube">▶️</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NOVA Technologies. All rights reserved. Designed by Zenova. Programmed by Zaheer Baloch</p>
+            </div>
+        </div>
+    </footer>
 
-<!-- SECTION: Nova Ring -->
-<section id="ring" class="section ring">
-  <h2 class="section-title">Nova Ring</h2>
-  <div class="ring-content">
-    <img src="assets/ring.png" alt="Nova Ring"/>
-    <ul>
-      <li>Gesture Controls for Watch & Phone</li>
-      <li>Custom LED Glow + Display</li>
-      <li>AI Feature Unlock via Watch Link</li>
-      <li>Connects via Bluetooth LE</li>
-    </ul>
-  </div>
-</section>
-
-<!-- SECTION: Pre-Registration -->
-<section id="register" class="section register">
-  <h2 class="section-title">Pre-Register</h2>
-  <form>
-    <input type="text" placeholder="Your Name" required/>
-    <input type="email" placeholder="Email Address" required/>
-    <button type="submit">Submit</button>
-  </form>
-</section>
-
-<!-- SECTION: Join Community -->
-<section id="join" class="section join">
-  <h2 class="section-title">Join the Nova Community</h2>
-  <p>Follow us & be part of the revolution</p>
-  <div class="social-icons">
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-discord"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-  </div>
-</section>
-
-<!-- SECTION: Footer -->
-<footer>
-  <p>&copy; 2025 Zenova Inc. All Rights Reserved.
-    Designed by Zaheer Baloch.</p>
-</footer>
-
+    <script src="js/main.js"></script>
 </body>
 </html>
