@@ -1,20 +1,4 @@
-function showAuth() {
-  const modal = document.getElementById('authModal');
-  modal.classList.remove('hidden');
-  playSound();
-}
-
-function closeAuth() {
-  const modal = document.getElementById('authModal');
-  modal.classList.add('hidden');
-}
-
-function redirectToSignup() {
-  playSound();
-  window.location.href = 'signup.html'; // Placeholder for your sign-up page
-}
-
-function playSound() {
-  const audio = new Audio('assets/entry-sound.mp3'); // Only if sound file exists
-  audio.play();
-}
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Zenova Entry Screen Ready ✅");
+  // You can add sound, animations or background effects here later
+});
