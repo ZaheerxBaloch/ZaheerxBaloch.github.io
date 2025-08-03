@@ -1,32 +1,49 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nova Dashboard</title>
-  <link rel="stylesheet" href="dashboard.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nova Admin Dashboard</title>
+  <link rel="stylesheet" href="assets/dashboard.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <div class="sidebar">
     <h2>NOVA</h2>
     <ul>
-      <li data-target="users">Users</li>
-      <li data-target="analytics">Analytics</li>
-      <li data-target="settings">Settings</li>
+      <li onclick="switchPanel('overview')">Overview</li>
+      <li onclick="switchPanel('stats')">Stats</li>
+      <li onclick="switchPanel('ai')">AI Logs</li>
+      <li onclick="switchPanel('settings')">Settings</li>
     </ul>
-  </div>  <div class="main">
-    <div class="card users">
-      <h3>User Management</h3>
-      <p>Total Users: 1,205</p>
-    </div><div class="card analytics">
-  <h3>Analytics</h3>
-  <p>Website Visits: 10,532</p>
+  </div>
+  <div class="main">
+    <div id="overview" class="panel active">
+      <h1>Welcome, Commander</h1>
+      <div class="cards">
+        <div class="card">Active Devices<br><strong>8</strong></div>
+        <div class="card">Uptime<br><strong>99.9%</strong></div>
+        <div class="card">AI Tasks<br><strong>350+</strong></div>
+        <div class="card">Errors<br><strong>0</strong></div>
+      </div>
+    </div><div id="stats" class="panel">
+  <h1>System Stats</h1>
+  <canvas id="chart" height="100"></canvas>
 </div>
 
-<div class="card settings">
-  <h3>Settings</h3>
-  <p>Customize your experience.</p>
+<div id="ai" class="panel">
+  <h1>AI Logs</h1>
+  <ul class="logs">
+    <li>[✔] AI initialized at 07:45</li>
+    <li>[✔] Task "Nova Scan" completed</li>
+    <li>[✖] Sync delay detected</li>
+    <li>[✔] Recovery protocol engaged</li>
+  </ul>
 </div>
 
-  </div>  <script src="dashboard.js"></script></body>
+<div id="settings" class="panel">
+  <h1>Settings</h1>
+  <p>Dark Mode: <input type="checkbox" id="toggleMode"></p>
+</div>
+
+  </div>  <script src="assets/dashboard.js"></script></body>
 </html>
