@@ -3,66 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>NOVA - AI Smartwatch | Cyberpunk Future</title>
+    <title>NOVA | AI Smartwatch</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Quantum Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
-        <div class="quantum-loader">
-            <div class="quantum-dot" style="--delay:0s"></div>
-            <div class="quantum-dot" style="--delay:0.2s"></div>
-            <div class="quantum-dot" style="--delay:0.4s"></div>
-        </div>
-        <div class="loading-text">
-            <span class="loading-code">>> SYSTEM_BOOT [NOVA_OS]</span>
+        <div class="quantum-sphere"></div>
+        <div class="loading-status">
+            <span class="loading-text">INITIALIZING NOVA OS</span>
             <span class="loading-percent">0%</span>
         </div>
     </div>
     
     <!-- Main Content -->
     <div class="container">
-        <!-- Holographic Logo -->
-        <div class="holographic-logo">
-            <h1 class="logo">NOVA</h1>
-            <div class="logo-subtext">
+        <!-- Holographic Header -->
+        <div class="hero">
+            <h1 class="logo" data-text="NOVA">NOVA</h1>
+            <div class="tagline">
                 <p class="slogan">The Future on Your Wrist</p>
-                <p class="powered-by">Powered by <span class="zenova-glow">Zenova</span></p>
+                <p class="powered-by">Powered by <span>Zenova</span></p>
             </div>
         </div>
         
-        <!-- Cyber Buttons -->
-        <div class="cyber-buttons">
-            <button class="holo-btn" onclick="window.location.href='comingsoon.html'">
-                <i class="fas fa-fingerprint"></i> Login
+        <!-- Cyberpunk Buttons -->
+        <div class="actions">
+            <button class="cyber-button" onclick="window.location.href='comingsoon.html'">
+                <i class="fas fa-fingerprint"></i> <span>Biometric Login</span>
             </button>
-            <button class="holo-btn" onclick="window.location.href='comingsoon.html'">
-                <i class="fas fa-user-plus"></i> Create Account
+            <button class="cyber-button" onclick="window.location.href='comingsoon.html'">
+                <i class="fas fa-user-astronaut"></i> <span>Create ID</span>
             </button>
-            <button class="holo-btn guest-btn" onclick="window.location.href='entry.html'">
-                <i class="fas fa-rocket"></i> Guest Mode
+            <button class="cyber-button ghost" onclick="window.location.href='entry.html'">
+                <i class="fas fa-rocket"></i> <span>Guest Access</span>
             </button>
         </div>
     </div>
     
-    <!-- Cyber Footer -->
-    <footer class="cyber-footer">
-        <div class="footer-grid">
-            <div class="footer-column">
-                <h4>EXPLORE</h4>
-                <a href="#">Tech</a>
-                <a href="#">AI Core</a>
-            </div>
-            <div class="footer-column">
-                <h4>LEGAL</h4>
+    <!-- Neu-Footer -->
+    <footer class="neu-footer">
+        <div class="footer-content">
+            <div class="legal-links">
                 <a href="#">Terms</a>
                 <a href="#">Privacy</a>
+                <a href="#">Cookies</a>
             </div>
-        </div>
-        <div class="copyright">
-            © 2025 ZENOVA INC | <span class="neon-underline">Designed by Zaheer Baloch</span>
+            <div class="copyright">
+                © 2025 ZENOVA Core | <span>Designed by Zaheer Baloch</span>
+            </div>
         </div>
     </footer>
 
