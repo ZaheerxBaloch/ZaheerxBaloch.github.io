@@ -1,170 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NOVA | The Future on Your Wrist</title>
-
-  <!-- ✅ Internal CSS Fix -->
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      overflow-x: hidden;
-    }
-
-    .container, .wrapper, .footer {
-      width: 100%;
-      max-width: 100%;
-      margin: 0 auto;
-      padding: 0;
-    }
-  </style>
-
-  <!-- ✅ External Fonts & Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="home.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA | AI Smartwatch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <span class="logo-text">NOVA</span>
-                <span class="logo-dot"></span>
-            </a>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="#features" class="nav-link">Features</a>
-                <a href="products.html" class="nav-link">Products</a>
-                <a href="#join" class="nav-link">Join Us</a>
-            </div>
-            <button class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="quantum-loader">
+            <div class="quantum-dot" style="--i:1"></div>
+            <div class="quantum-dot" style="--i:2"></div>
+            <div class="quantum-dot" style="--i:3"></div>
+            <div class="quantum-core"></div>
         </div>
-    </nav>
+        <div class="loading-text">
+            <span class="loading-code">>_ INITIALIZING NOVA_OS</span>
+            <span class="loading-percent" id="loadingPercent">0%</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="cyber-header">
+        <div class="logo">
+            <span>NOVA</span>
+            <div class="logo-badge">AI</div>
+        </div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#tech">Technology</a>
+            <a href="#developers">Developers</a>
+            <button class="menu-btn">
+                <div class="menu-dot"></div>
+                <div class="menu-dot"></div>
+                <div class="menu-dot"></div>
+            </button>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="container">
+    <section class="hero-section">
         <div class="hero-content">
-            <h1 class="hero-title">EXPERIENCE THE FUTURE</h1>
-            <p class="hero-subtitle">Smart technology meets cosmic design</p>
-            <a href="#features" class="cta-button">Explore Features</a>
-
-            <!-- Single Product Image -->
-          <section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="container hero-content" style="text-align: center;">
-    <h1 class="hero-title">The Future on Your Wrist</h1>
-    <p class="hero-subtitle">Experience Nova. Powered by AI. Designed for tomorrow.</p>
-    
-    <!-- Product Image Here -->
-    <img src="assets/hero.png" alt="Nova Watch" class="product-img-single">
-  </div>
-</section>
+            <h1>REDEFINE YOUR REALITY</h1>
+            <p class="hero-subtext">The world's first AI-integrated quantum smartwatch</p>
+            <div class="hero-buttons">
+                <a href="comingsoon.html" class="cta-btn">
+                    <i class="fas fa-shopping-cart"></i> Pre-order Now
+                </a>
+                <a href="#features" class="secondary-btn">
+                    <i class="fas fa-play"></i> See Features
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="hero.png" alt="NOVA Smartwatch" loading="lazy">
+            <div class="hero-glow"></div>
+        </div>
+    </section>
 
     <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <h2 class="section-title">UNMATCHED TECHNOLOGY</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">⌚</div>
-                    <h3>Quantum Sync</h3>
-                    <p>Instant connection with all your devices using quantum entanglement technology</p>
+    <section class="features-section" id="features">
+        <div class="section-header">
+            <h2>CUTTING-EDGE FEATURES</h2>
+            <p>Powered by Zenova Core AI</p>
+        </div>
+        
+        <div class="features-grid">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-satellite"></i>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Nova Core</h3>
-                    <p>Our proprietary processor delivers unmatched performance with minimal power</p>
+                <h3>Satellite SOS</h3>
+                <p>Emergency connectivity anywhere on Earth via quantum satellite network</p>
+                <div class="feature-badge">NEW</div>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-brain"></i>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌌</div>
-                    <h3>Cosmic UI</h3>
-                    <p>Holographic interface that adapts to your environment and preferences</p>
+                <h3>AI Assistant</h3>
+                <p>GPT-4 powered offline intelligence with holographic interface</p>
+                <div class="feature-badge">AI</div>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-heartbeat"></i>
                 </div>
+                <h3>Health Guardian</h3>
+                <p>Real-time nanotech health monitoring with predictive diagnostics</p>
+                <div class="feature-badge">PRO</div>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section class="products">
-        <div class="container">
-            <h2 class="section-title">OUR COLLECTION</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image" style="background-color: #1a1a2e;"></div>
-                    <h3>NOVA X1</h3>
-                    <p>The flagship model with all premium features</p>
-                </div>
-                <div class="product-card">
-                    <div class="product-image" style="background-color: #16213e;"></div>
-                    <h3>NOVA S</h3>
-                    <p>Sleek design with essential smart features</p>
-                </div>
-                <div class="product-card">
-                    <div class="product-image" style="background-color: #0f3460;"></div>
-                    <h3>NOVA Pro</h3>
-                    <p>Professional grade for extreme conditions</p>
+    <!-- Tech Specs -->
+    <section class="tech-section" id="tech">
+        <div class="section-header">
+            <h2>TECHNOLOGY</h2>
+            <p>Beyond the cutting edge</p>
+        </div>
+        
+        <div class="tech-grid">
+            <div class="tech-card">
+                <div class="tech-number">01</div>
+                <h3>Quantum Charging</h3>
+                <p>72-hour battery life with 10-minute full recharge</p>
+                <div class="tech-line"></div>
+            </div>
+            
+            <div class="tech-card">
+                <div class="tech-number">02</div>
+                <h3>Neural Interface</h3>
+                <p>EEG sensors for thought-controlled navigation</p>
+                <div class="tech-line"></div>
+            </div>
+            
+            <div class="tech-card">
+                <div class="tech-number">03</div>
+                <h3>Holographic Display</h3>
+                <p>Full-color 3D projections in mid-air</p>
+                <div class="tech-line"></div>
+            </div>
+            
+            <div class="tech-card">
+                <div class="tech-number">04</div>
+                <h3>Military Grade</h3>
+                <p>IP69 waterproof, 100m depth resistant</p>
+                <div class="tech-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Section -->
+    <section class="dev-section" id="developers">
+        <div class="section-header">
+            <h2>FOR DEVELOPERS</h2>
+            <p>Build the future with our SDK</p>
+        </div>
+        
+        <div class="dev-cards">
+            <div class="dev-card">
+                <i class="fab fa-github"></i>
+                <h3>Open Source SDK</h3>
+                <p>Full access to our quantum computing APIs</p>
+                <a href="comingsoon.html" class="dev-link">
+                    View Documentation <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="dev-card">
+                <i class="fas fa-users"></i>
+                <h3>Community</h3>
+                <p>Join 25,000+ developers in our ecosystem</p>
+                <a href="comingsoon.html" class="dev-link">
+                    Join Discord <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="dev-card">
+                <i class="fas fa-tools"></i>
+                <h3>Tools</h3>
+                <p>Holographic emulator and debug suite</p>
+                <a href="comingsoon.html" class="dev-link">
+                    Download <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cyber-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>NOVA</h3>
+                <p>The Future on Your Wrist</p>
+                <div class="social-links">
+                    <a href="https://tiktok.com/@nova.ai.official" target="_blank">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://instagram.com/nova.ai.official" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/zenova_official" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
                 </div>
             </div>
-            <a href="products.html" class="cta-button outline">See All Products</a>
+            
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="comingsoon.html">About</a>
+                <a href="comingsoon.html">Careers</a>
+                <a href="comingsoon.html">Newsroom</a>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <a href="pp.html">Privacy Policy</a>
+                <a href="tc.html">Terms & Conditions</a>
+                <a href="comingsoon.html">Cookie Policy</a>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-    </section>
-
-    <!-- Join Us Section -->
-    <section id="join" class="join">
-        <div class="container">
-            <h2 class="section-title">JOIN THE NOVA UNIVERSE</h2>
-            <p class="join-subtitle">Be the first to experience our latest innovations</p>
-            <form class="join-form">
-                <input type="email" placeholder="Your email address" required>
-                <button type="submit" class="cta-button">Subscribe</button>
-            </form>
+        
+        <div class="footer-bottom">
+            <p>© 2025 ZENOVA TECHNOLOGIES. All rights reserved.</p>
+            <p>Designed by Zaheer Baloch</p>
         </div>
-    </section>
+    </footer>
 
-    <footer class="footer">
-  <div class="footer-top">
-    <p>More ways to shop: <a href="#">Find a Nova Store</a> or <a href="#">authorized retailer</a> near you.<br>
-    Or call <strong>+92-XXX-NOVA</strong></p>
-  </div>
-
-  <div class="footer-links">
-    <ul>
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms of Use</a></li>
-      <li><a href="#">Sales and Refunds</a></li>
-      <li><a href="#">Legal</a></li>
-      <li><a href="#">Site Map</a></li>
-    </ul>
-  </div>
-
-  <div class="footer-social">
-    <p>Follow us on:</p>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/nova.ai_official" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.tiktok.com/@nova.ai_official" target="_blank"><i class="fab fa-tiktok"></i></a>
-      <a href="https://twitter.com/nova_ai_official" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.youtube.com/c/NovaOfficial" target="_blank"><i class="fab fa-youtube"></i></a>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 Zenova Technologies. All rights reserved. — <a href="#">Pakistan</a></p>
-  </div>
-</footer>
-    <script src="home.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
