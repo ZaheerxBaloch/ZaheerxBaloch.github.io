@@ -1,4 +1,5 @@
 /* entry.css */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +15,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .entry-container {
@@ -23,6 +25,7 @@ body {
     animation: fadeInSlide 1s ease-out forwards;
 }
 
+/* Logo Styles */
 .logo-container {
     margin-bottom: 3rem;
 }
@@ -44,14 +47,12 @@ body {
 .tagline {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    font-size: 1.2rem;
-    letter-spacing: 0.2rem;
-    color: rgba(255, 255, 255, 0.8);
-    opacity: 0;
-    animation: fadeIn 1s ease-out 0.6s forwards;
+    font-size: 1rem;
+    color: #ccc;
 }
 
-.launch-btn {
+/* Button Styles - Shared */
+.launch-btn, .create-btn, .login-btn {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.2rem;
     font-weight: 500;
@@ -59,26 +60,21 @@ body {
     background: transparent;
     color: #00ffff;
     border: 2px solid #00ffff;
-    padding: 1rem 3rem;
+    padding: 1rem 2.5rem;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInSlide 1s ease-out 0.9s forwards;
+    margin: 0.5rem;
 }
 
-.launch-btn:hover {
+.launch-btn:hover, .create-btn:hover, .login-btn:hover {
     background: rgba(0, 255, 255, 0.1);
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
     transform: translateY(-2px);
 }
 
+/* Animation */
 @keyframes fadeInSlide {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
     to {
         opacity: 1;
         transform: translateY(0);
@@ -86,77 +82,51 @@ body {
 }
 
 @keyframes glowFadeIn {
-    from {
-        opacity: 0;
-        filter: blur(5px);
-    }
     to {
         opacity: 1;
-        filter: blur(0);
+        text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
     }
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* Optional Pulse Glow Animation */
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 10px #00ffff; }
+    50% { box-shadow: 0 0 20px #00ffff; }
+    100% { box-shadow: 0 0 10px #00ffff; }
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .logo {
-        font-size: 3rem;
-        letter-spacing: 0.3rem;
-    }
-    
-    .tagline {
-        font-size: 1rem;
-        letter-spacing: 0.1rem;
-    }
-    
-    .launch-btn {
-        font-size: 1rem;
-        padding: 0.8rem 2rem;
-    }
+/* Uncomment below to add continuous glow to buttons */
+/*
+.launch-btn,
+.create-btn,
+.login-btn {
+    animation: pulseGlow 2s infinite alternate;
 }
-.button-group {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    animation: fadeInSlide 1s ease-out 1s forwards;
-    opacity: 0;
-    transform: translateY(20px);
-}
+*/
 
-.create-btn {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: 0.15rem;
-    background: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-    border: 2px solid #ffffff;
-    padding: 0.8rem 2.5rem;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.create-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
-}
-
-.footer {
-    position: absolute;
-    bottom: 15px;
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 10px;
     width: 100%;
     text-align: center;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: #888;
     font-family: 'Poppins', sans-serif;
-    letter-spacing: 0.1rem;
-    opacity: 0;
-    animation: fadeIn 1s ease-out 1.4s forwards;
+}
+
+/* Loader (Optional) */
+.loader {
+    border: 6px solid rgba(255, 255, 255, 0.1);
+    border-top: 6px solid #00ffff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
