@@ -1,119 +1,66 @@
-/* Reset */
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body, html {
-  height: 100%;
-  width: 100%;
   font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #fff;
-  overflow: hidden;
-  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #0f0c29);
-  background-size: 600% 600%;
-  animation: gradientBG 15s ease infinite;
-}
-
-/* Animated Gradient Keyframe */
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Main Wrapper */
-.main-wrapper {
-  height: 100%;
-  width: 100%;
-  position: relative;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+
+.main-wrapper {
+  text-align: center;
   padding: 20px;
 }
 
-/* Logo Section */
-.logo-box {
-  text-align: center;
-  margin-bottom: 30px;
-  padding-top: 5vh; /* Fix for top cut issue */
-}
-.logo {
+.logo-box .logo {
   font-family: 'Orbitron', sans-serif;
-  font-size: 3rem;
-  letter-spacing: 4px;
-}
-.tagline {
-  font-size: 1.1rem;
-}
-.subline {
-  font-size: 0.9rem;
-  opacity: 0.8;
+  font-size: 48px;
+  margin: 0;
+  color: #00eaff;
 }
 
-/* Buttons */
-.buttons {
-  text-align: center;
-  margin-bottom: 30px;
-}
-.btn {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid #fff;
-  color: #fff;
-  padding: 10px 20px;
-  margin: 10px 5px;
-  border-radius: 25px;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.btn:hover {
-  background-color: #fff;
-  color: #000;
-}
-.guest {
-  display: block;
-  margin-bottom: 15px;
-}
-.login-row {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.login {
-  background-color: rgba(0, 150, 255, 0.15);
-}
-.create {
-  background-color: rgba(0, 255, 150, 0.15);
-}
-
-/* Footer */
-.footer {
-  position: absolute;
-  bottom: 15px;
-  width: 100%;
-  text-align: center;
-  font-size: 0.85rem;
+.logo-box .tagline {
+  font-size: 20px;
+  margin: 5px 0;
   color: #ccc;
 }
 
-/* Responsive Fix */
-@media (max-width: 768px) {
-  .logo-box {
-    padding-top: 10vh; /* Extra padding for smaller screens */
-  }
+.logo-box .subline {
+  font-size: 14px;
+  color: #888;
 }
 
-@media (max-width: 480px) {
-  .logo {
-    font-size: 2rem;
-  }
-  .btn {
-    font-size: 0.85rem;
-    padding: 8px 16px;
-  }
+.buttons {
+  margin-top: 30px;
+}
+
+.login-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  background: #00eaff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #00b3cc;
+}
+
+.footer {
+  margin-top: 40px;
+  font-size: 12px;
+  color: #aaa;
 }
