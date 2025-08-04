@@ -152,6 +152,7 @@ section {
   padding: 40px 20px; /* Adds breathing space around content */
   background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   overflow: visible;
+  flex-direction: column; /* Ensures vertical layout on smaller screens */
 }
 
 .hero img {
@@ -163,49 +164,51 @@ section {
 }
 
 .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(123, 45, 255, 0.1) 0%, rgba(10, 10, 26, 0.9) 70%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(123, 45, 255, 0.1) 0%, rgba(10, 10, 26, 0.9) 70%);
+  z-index: 0;
 }
 
 .hero-content {
-    .hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  text-align: center;
 }
 
 .hero-title {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    background: linear-gradient(90deg, var(--primary), var(--light));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    line-height: 1.2;
+  font-size: 4rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, var(--primary), var(--light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.2;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 40px;
-    color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.8);
 }
+
 .product-img-single {
-    width: 100%;
-    max-width: 400px;  /* limits size on big screens */
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    object-fit: contain;  /* ensures image doesn’t stretch */
+  width: 100%;
+  max-width: 400px;  /* limits size on big screens */
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: contain;
 }
 
 .product-img-single:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 50px rgba(0, 255, 255, 0.4);
+  transform: scale(1.03);
+  box-shadow: 0 0 50px rgba(0, 255, 255, 0.4);
 }
 
 /* Buttons */
