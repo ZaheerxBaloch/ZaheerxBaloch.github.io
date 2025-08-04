@@ -1,37 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nova | The Future on Your Wrist | Powered by Zenova</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="entry.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NOVA | The Future on Your Wrist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #01022d, #000000);
+      color: #fff;
+    }
+
+    .bg {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, #00f0ff22 0%, #000 80%);
+      z-index: -1;
+    }
+
+    .main-wrapper {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .logo-box .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
+      color: #00f0ff;
+      margin: 0;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      margin-top: 5px;
+      color: #ccc;
+    }
+
+    .subline {
+      font-size: 1rem;
+      margin-top: 2px;
+      color: #777;
+    }
+
+    .buttons {
+      margin-top: 60px;
+    }
+
+    .btn {
+      background: transparent;
+      border: 2px solid #00f0ff;
+      color: #00f0ff;
+      padding: 10px 22px;
+      font-size: 1rem;
+      margin: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #00f0ff;
+      color: #000;
+    }
+
+    .login-row {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer {
+      margin-top: 80px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-    <div class="entry-container">
-        <div class="logo-container">
-            <h1 class="logo" id="logo">NOVA</h1>
-            <p class="tagline" id="tagline">The Future on Your Wrist | Powered by Zenova</p>
-        </div>
-        <button class="launch-btn" id="launchBtn">LAUNCH</button>
+
+  <div class="bg"></div>
+
+  <div class="main-wrapper">
+    <div class="logo-box">
+      <h1 class="logo">NOVA</h1>
+      <p class="tagline">The Future on Your Wrist</p>
+      <p class="subline">Powered by Zenova</p>
     </div>
 
-    <!-- Preload resources for next pages -->
-    <link rel="preload" href="home.css" as="style">
-    <link rel="preload" href="dashboard.css" as="style">
-    <link rel="preload" href="product.css" as="style">
-    <link rel="preload" href="auth.css" as="style">
-    <link rel="preload" href="home.js" as="script">
-    <link rel="preload" href="dashboard.js" as="script">
-    <link rel="preload" href="product.js" as="script">
-    <link rel="preload" href="auth.js" as="script">
+    <div class="buttons">
+      <div class="login-row">
+        <button class="btn" onclick="location.href='comingsoon.html'">Login</button>
+        <button class="btn" onclick="location.href='comingsoon.html'">Create Account</button>
+      </div>
 
-    footer class="footer">
+      <button class="btn" onclick="location.href='home.html'">Sign in as Guest</button>
+    </div>
+
+    <footer class="footer">
       © 2025 Zenova Inc. | Designed by Zaheer Baloch
     </footer>
-</div>
-    <script src="entry.js"></script>
+  </div>
+
 </body>
 </html>
