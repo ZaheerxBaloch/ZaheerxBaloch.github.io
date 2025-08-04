@@ -1,100 +1,112 @@
-/* Reset & Fonts */
-body {
+/* Reset */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-  color: white;
+  box-sizing: border-box;
 }
 
-/* Wrapper for full vertical control */
+/* Background Video */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Logo */
+.logo-box {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.logo-box .logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 48px;
+  color: #00bfff;
+  letter-spacing: 5px;
+}
+
+.logo-box .tagline {
+  font-size: 18px;
+  color: #aaa;
+  margin-top: 8px;
+}
+
+.logo-box .subline {
+  font-size: 13px;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* Wrapper */
 .main-wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 0 20px;
 }
 
-/* Entry Box */
-.entry-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Logo and tagline */
-.logo-container {
+/* Buttons */
+.buttons {
   text-align: center;
-  margin-bottom: 40px;
-}
-
-.logo {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 48px;
-  letter-spacing: 4px;
-  margin-bottom: 8px;
-}
-
-.tagline {
-  font-size: 18px;
-  color: #aaa;
-  margin-bottom: 6px;
-}
-
-.subline {
-  font-size: 14px;
-  color: #555;
-}
-
-/* Button Styling */
-.button-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-top: 40px;
 }
 
 .btn {
-  padding: 12px 28px;
+  padding: 12px 30px;
   font-size: 16px;
   border-radius: 30px;
   border: none;
   cursor: pointer;
+  transition: 0.3s;
   margin: 10px;
-  transition: background 0.3s, color 0.3s;
 }
 
-/* Guest = primary style */
-.primary {
+.btn.guest {
   background: #00bfff;
   color: white;
   font-weight: 600;
 }
-.primary:hover {
-  background: #0099cc;
+
+.btn.guest:hover {
+  background: #009ace;
 }
 
-/* Login/Create = secondary style */
-.secondary {
-  background: white;
-  color: black;
-  border: 1px solid #ccc;
+.login-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
-.secondary:hover {
+
+.btn.login,
+.btn.create {
+  background: white;
+  color: #111;
+  font-weight: 500;
+}
+
+.btn.login:hover,
+.btn.create:hover {
   background: #f0f0f0;
 }
 
-/* Side-by-side buttons */
-.button-row {
-  display: flex;
-  gap: 15px;
-}
-
-/* Footer styling */
+/* Footer */
 .footer {
   text-align: center;
-  padding: 20px;
   font-size: 14px;
-  color: #777;
-  margin-top: auto;
+  color: #ccc;
+  padding: 10px 0;
 }
