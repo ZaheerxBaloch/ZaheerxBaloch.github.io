@@ -1,17 +1,28 @@
+:root {
+    --primary: #00f3ff;
+    --secondary: #a162e8;
+    --dark: #0f0c29;
+    --light: #ffffff;
+    --glass: rgba(255, 255, 255, 0.1);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(-45deg, #0f0c29, #1a1a3a, #24245e, #2d2d86);
+    background: linear-gradient(-45deg, var(--dark), #1a1a3a, #24245e, #2d2d86);
     background-size: 400% 400%;
     height: 100vh;
+    width: 100vw;
     overflow: hidden;
-    color: white;
+    color: var(--light);
     animation: gradientBG 15s ease infinite;
+    touch-action: manipulation;
 }
 
 @keyframes gradientBG {
@@ -40,7 +51,7 @@ body {
     height: 60px;
     border: 4px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    border-top: 4px solid #00f3ff;
+    border-top: 4px solid var(--primary);
     animation: spin 1s linear infinite;
     margin-bottom: 20px;
 }
@@ -52,7 +63,7 @@ body {
 
 .loading-text {
     font-family: 'Orbitron', sans-serif;
-    color: #00f3ff;
+    color: var(--primary);
     font-size: 1.2rem;
     letter-spacing: 2px;
     text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
@@ -69,30 +80,31 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     height: 100vh;
-    padding: 5vh 0;
+    width: 100vw;
+    padding: 2rem;
     opacity: 0;
     animation: fadeIn 1s ease-out 1.5s forwards;
+    box-sizing: border-box;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.logo-container {
+.brand-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5vh;
+    margin-top: 10vh;
 }
 
 .logo {
     font-family: 'Orbitron', sans-serif;
-    font-size: clamp(3rem, 10vw, 5rem);
+    font-size: min(10vw, 5rem);
     font-weight: 700;
-    background: linear-gradient(to right, #00f3ff, #a162e8);
+    background: linear-gradient(to right, var(--primary), var(--secondary));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -102,7 +114,7 @@ body {
     animation: logoAppear 1s ease-out 2s forwards, glow 2s ease-in-out infinite alternate;
 }
 
-.logo-subtext {
+.tagline {
     text-align: center;
 }
 
@@ -119,17 +131,16 @@ body {
 .slogan {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-size: min(4vw, 1.5rem);
     margin-bottom: 0.5rem;
     opacity: 0;
     animation: textAppear 1s ease-out 2.3s forwards;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .powered-by {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    font-size: clamp(0.7rem, 2.5vw, 0.8rem);
+    font-size: min(2.5vw, 0.8rem);
     opacity: 0.7;
     opacity: 0;
     animation: textAppear 1s ease-out 2.5s forwards;
@@ -140,21 +151,21 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-.buttons-container {
+.actions-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     max-width: 500px;
-    margin-bottom: 10vh;
+    margin: 0 auto 5vh;
     opacity: 0;
     animation: buttonsAppear 1s ease-out 2.7s forwards;
 }
 
-.auth-buttons {
+.auth-actions {
     display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
     width: 100%;
     justify-content: center;
 }
@@ -166,92 +177,66 @@ body {
 
 .btn {
     position: relative;
-    padding: 15px 30px;
+    padding: 1rem 2rem;
     border: none;
     border-radius: 50px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
     color: white;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    font-size: clamp(0.9rem, 3vw, 1rem);
+    font-size: min(3.5vw, 1rem);
     cursor: pointer;
     overflow: hidden;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    min-width: 150px;
-}
-
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #00f3ff, #a162e8);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
+    max-width: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.btn:hover {
+.btn-primary {
+    background: rgba(0, 243, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 243, 255, 0.3);
+}
+
+.btn-primary:hover {
+    background: rgba(0, 243, 255, 0.25);
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0, 243, 255, 0.3);
 }
 
-.btn:hover::before {
-    opacity: 1;
+.btn-secondary {
+    background: rgba(161, 98, 232, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(161, 98, 232, 0.3);
+    max-width: 420px;
+}
+
+.btn-secondary:hover {
+    background: rgba(161, 98, 232, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(161, 98, 232, 0.3);
 }
 
 .btn:active {
     transform: translateY(1px);
 }
 
-.btn-glow::after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border-radius: 50px;
-    background: linear-gradient(45deg, #00f3ff, #a162e8, #00f3ff);
-    background-size: 200% 200%;
-    z-index: -2;
-    filter: blur(5px);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    animation: gradientMove 3s ease infinite;
-}
-
-.guest-btn {
-    width: 100%;
-    max-width: 320px;
-    padding: 16px 30px;
-}
-
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.btn:hover.btn-glow::after {
-    opacity: 0.7;
-}
-
 .footer {
     position: fixed;
-    bottom: 20px;
+    bottom: 1rem;
     width: 100%;
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    font-size: clamp(0.6rem, 2vw, 0.8rem);
+    font-size: min(2vw, 0.8rem);
     opacity: 0.6;
     opacity: 0;
     animation: footerAppear 1s ease-out 3s forwards;
+    padding: 0 1rem;
 }
 
 @keyframes footerAppear {
@@ -296,22 +281,30 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .auth-buttons {
+    .container {
+        padding: 1rem;
+    }
+    
+    .auth-actions {
         flex-direction: column;
-        gap: 15px;
-        align-items: center;
+        gap: 1rem;
     }
     
     .btn {
-        width: 100%;
-        max-width: 250px;
+        max-width: 100%;
     }
     
-    .logo {
-        margin-bottom: 0.5rem;
+    .brand-container {
+        margin-top: 5vh;
+    }
+}
+
+@media (max-height: 600px) {
+    .brand-container {
+        margin-top: 2vh;
     }
     
-    .buttons-container {
-        margin-bottom: 5vh;
+    .actions-container {
+        margin-bottom: 2vh;
     }
 }
