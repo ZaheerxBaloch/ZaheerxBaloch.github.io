@@ -1,49 +1,118 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nova Admin Dashboard</title>
-  <link rel="stylesheet" href="assets/dashboard.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
-  <div class="sidebar">
-    <h2>NOVA</h2>
-    <ul>
-      <li onclick="switchPanel('overview')">Overview</li>
-      <li onclick="switchPanel('stats')">Stats</li>
-      <li onclick="switchPanel('ai')">AI Logs</li>
-      <li onclick="switchPanel('settings')">Settings</li>
-    </ul>
-  </div>
-  <div class="main">
-    <div id="overview" class="panel active">
-      <h1>Welcome, Commander</h1>
-      <div class="cards">
-        <div class="card">Active Devices<br><strong>8</strong></div>
-        <div class="card">Uptime<br><strong>99.9%</strong></div>
-        <div class="card">AI Tasks<br><strong>350+</strong></div>
-        <div class="card">Errors<br><strong>0</strong></div>
-      </div>
-    </div><div id="stats" class="panel">
-  <h1>System Stats</h1>
-  <canvas id="chart" height="100"></canvas>
-</div>
+    <div class="cyber-container">
+        <!-- Sidebar -->
+        <div class="cyber-sidebar">
+            <div class="logo">
+                <h1>NOVA</h1>
+                <p>AI Smartwatch OS</p>
+            </div>
+            
+            <nav>
+                <a href="#" class="active">
+                    <i class="fas fa-chart-network"></i> Dashboard
+                </a>
+                <a href="#">
+                    <i class="fas fa-heart-pulse"></i> Health
+                </a>
+                <a href="#">
+                    <i class="fas fa-satellite-dish"></i> Satellite
+                </a>
+                <a href="#">
+                    <i class="fas fa-hologram"></i> Holograms
+                </a>
+                <a href="#">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+            </nav>
+            
+            <div class="user-profile">
+                <div class="avatar">ZB</div>
+                <p>Zaheer Baloch</p>
+            </div>
+        </div>
 
-<div id="ai" class="panel">
-  <h1>AI Logs</h1>
-  <ul class="logs">
-    <li>[✔] AI initialized at 07:45</li>
-    <li>[✔] Task "Nova Scan" completed</li>
-    <li>[✖] Sync delay detected</li>
-    <li>[✔] Recovery protocol engaged</li>
-  </ul>
-</div>
+        <!-- Main Content -->
+        <div class="cyber-main">
+            <header class="cyber-header">
+                <h2>Dashboard</h2>
+                <div class="header-actions">
+                    <button class="cyber-btn small">
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
+                    <button class="cyber-btn small">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                </div>
+            </header>
 
-<div id="settings" class="panel">
-  <h1>Settings</h1>
-  <p>Dark Mode: <input type="checkbox" id="toggleMode"></p>
-</div>
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="icon heart">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>78 <span>bpm</span></h3>
+                    <p>Heart Rate</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="icon battery">
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                    <h3>94%</h3>
+                    <p>Battery</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="icon temp">
+                        <i class="fas fa-temperature-half"></i>
+                    </div>
+                    <h3>36.4°C</h3>
+                    <p>Body Temp</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="icon sos">
+                        <i class="fas fa-satellite"></i>
+                    </div>
+                    <h3>ON</h3>
+                    <p>Satellite SOS</p>
+                </div>
+            </div>
 
-  </div>  <script src="assets/dashboard.js"></script></body>
+            <!-- Hologram Controls -->
+            <div class="hologram-section">
+                <h3><i class="fas fa-hologram"></i> Hologram Projector</h3>
+                <div class="hologram-controls">
+                    <button class="cyber-btn">
+                        <i class="fas fa-play"></i> Activate
+                    </button>
+                    <div class="intensity-control">
+                        <label>Brightness</label>
+                        <input type="range" min="0" max="100" value="70">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emergency Section -->
+            <div class="emergency-section">
+                <button class="sos-btn">
+                    <i class="fas fa-satellite-dish"></i> EMERGENCY SATELLITE SOS
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
 </html>
