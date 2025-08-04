@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NOVA | The Future on Your Wrist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="entry.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova | The Future on Your Wrist | Powered by Zenova</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="entry.css">
 </head>
 <body>
-
-  <div class="bg"></div>
-
-  <div class="main-wrapper">
-    <div class="logo-box">
-      <h1 class="logo">NOVA</h1>
-      <p class="tagline">The Future on Your Wrist</p>
-      <p class="subline">Powered by Zenova</p>
+    <div class="entry-container">
+        <div class="logo-container">
+            <h1 class="logo" id="logo">NOVA</h1>
+            <p class="tagline" id="tagline">The Future on Your Wrist | Powered by Zenova</p>
+        </div>
+        <button class="launch-btn" id="launchBtn">LAUNCH</button>
     </div>
 
-    <div class="buttons">
-      <button class="btn guest" onclick="location.href='home.html'">Sign in as Guest</button>
-      <div class="login-row">
-        <button class="btn login" onclick="location.href='comingsoon.html'">Login</button>
-        <button class="btn create" onclick="location.href='comingsoon.html'">Create Account</button>
-      </div>
-    </div>
+    <!-- Preload resources for next pages -->
+    <link rel="preload" href="home.css" as="style">
+    <link rel="preload" href="dashboard.css" as="style">
+    <link rel="preload" href="product.css" as="style">
+    <link rel="preload" href="auth.css" as="style">
+    <link rel="preload" href="home.js" as="script">
+    <link rel="preload" href="dashboard.js" as="script">
+    <link rel="preload" href="product.js" as="script">
+    <link rel="preload" href="auth.js" as="script">
 
-    <footer class="footer">
-      © 2025 Zenova Inc. | Designed by Zaheer Baloch
-    </footer>
-  </div>
-
+    <script src="entry.js"></script>
 </body>
 </html>
