@@ -1,310 +1,91 @@
+/* ===== Cyberpunk Variables ===== */
 :root {
     --primary: #00f3ff;
     --secondary: #a162e8;
     --dark: #0f0c29;
-    --light: #ffffff;
-    --glass: rgba(255, 255, 255, 0.1);
+    --matrix: #00ff41;
+    --neon-pink: #ff2a6d;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(-45deg, var(--dark), #1a1a3a, #24245e, #2d2d86);
-    background-size: 400% 400%;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    color: var(--light);
-    animation: gradientBG 15s ease infinite;
-    touch-action: manipulation;
-}
-
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
+/* ===== Quantum Loading Animation ===== */
+.quantum-loader {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    transition: opacity 0.5s ease-out;
+    gap: 15px;
+    margin-bottom: 30px;
 }
-
-.spinner {
-    width: 60px;
-    height: 60px;
-    border: 4px solid rgba(255, 255, 255, 0.1);
+.quantum-dot {
+    width: 20px;
+    height: 20px;
+    background: var(--primary);
     border-radius: 50%;
-    border-top: 4px solid var(--primary);
-    animation: spin 1s linear infinite;
-    margin-bottom: 20px;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-.loading-text {
-    font-family: 'Orbitron', sans-serif;
-    color: var(--primary);
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { opacity: 0.6; }
-    50% { opacity: 1; }
-    100% { opacity: 0.6; }
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
-    width: 100vw;
-    padding: 2rem;
     opacity: 0;
-    animation: fadeIn 1s ease-out 1.5s forwards;
-    box-sizing: border-box;
+    animation: quantumPulse 1.5s ease-in-out var(--delay) infinite;
+}
+@keyframes quantumPulse {
+    0%, 100% { opacity: 0.1; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 15px var(--primary); }
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.loading-code {
+    font-family: 'Courier New', monospace;
+    color: var(--matrix);
+    text-shadow: 0 0 5px var(--matrix);
 }
 
-.brand-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10vh;
-}
-
-.logo {
-    font-family: 'Orbitron', sans-serif;
-    font-size: min(10vw, 5rem);
-    font-weight: 700;
-    background: linear-gradient(to right, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
-    margin-bottom: 1rem;
-    opacity: 0;
-    animation: logoAppear 1s ease-out 2s forwards, glow 2s ease-in-out infinite alternate;
-}
-
-.tagline {
-    text-align: center;
-}
-
-@keyframes logoAppear {
-    from { opacity: 0; transform: scale(0.8); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-@keyframes glow {
-    from { text-shadow: 0 0 10px rgba(0, 243, 255, 0.3), 0 0 20px rgba(161, 98, 232, 0.3); }
-    to { text-shadow: 0 0 20px rgba(0, 243, 255, 0.6), 0 0 30px rgba(161, 98, 232, 0.6); }
-}
-
-.slogan {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: min(4vw, 1.5rem);
-    margin-bottom: 0.5rem;
-    opacity: 0;
-    animation: textAppear 1s ease-out 2.3s forwards;
-}
-
-.powered-by {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: min(2.5vw, 0.8rem);
-    opacity: 0.7;
-    opacity: 0;
-    animation: textAppear 1s ease-out 2.5s forwards;
-}
-
-@keyframes textAppear {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.actions-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto 5vh;
-    opacity: 0;
-    animation: buttonsAppear 1s ease-out 2.7s forwards;
-}
-
-.auth-actions {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    width: 100%;
-    justify-content: center;
-}
-
-@keyframes buttonsAppear {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.btn {
-    position: relative;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 50px;
+/* ===== Holographic Buttons ===== */
+.holo-btn {
+    background: rgba(0, 243, 255, 0.08);
+    border: 1px solid var(--primary);
     color: white;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: min(3.5vw, 1rem);
-    cursor: pointer;
+    padding: 15px 30px;
+    margin: 10px;
+    font-family: 'Orbitron', sans-serif;
+    position: relative;
     overflow: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    width: 100%;
-    max-width: 200px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn-primary {
-    background: rgba(0, 243, 255, 0.15);
+    transition: all 0.3s;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 243, 255, 0.3);
 }
-
-.btn-primary:hover {
-    background: rgba(0, 243, 255, 0.25);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 243, 255, 0.3);
+.holo-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 243, 255, 0.4);
 }
-
-.btn-secondary {
-    background: rgba(161, 98, 232, 0.15);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(161, 98, 232, 0.3);
-    max-width: 420px;
-}
-
-.btn-secondary:hover {
-    background: rgba(161, 98, 232, 0.25);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(161, 98, 232, 0.3);
-}
-
-.btn:active {
-    transform: translateY(1px);
-}
-
-.footer {
-    position: fixed;
-    bottom: 1rem;
-    width: 100%;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: min(2vw, 0.8rem);
-    opacity: 0.6;
-    opacity: 0;
-    animation: footerAppear 1s ease-out 3s forwards;
-    padding: 0 1rem;
-}
-
-@keyframes footerAppear {
-    from { opacity: 0; }
-    to { opacity: 0.6; }
-}
-
-/* Space particles */
-.particles {
+.holo-btn:after {
+    content: "";
     position: absolute;
-    top: 0;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        transparent 48%,
+        var(--primary) 50%,
+        transparent 52%
+    );
+    animation: holoScan 3s linear infinite;
+}
+
+/* ===== Cyber Footer ===== */
+.cyber-footer {
+    background: rgba(15, 12, 41, 0.7);
+    border-top: 1px solid rgba(0, 243, 255, 0.2);
+    padding: 20px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+}
+.neon-underline {
+    position: relative;
+}
+.neon-underline:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
     left: 0;
     width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.particle {
-    position: absolute;
-    background: white;
-    border-radius: 50%;
-    opacity: 0.3;
-}
-
-/* Logo energy trail effect */
-.energy-trail {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0, 243, 255, 0.2) 0%, rgba(0, 243, 255, 0) 70%);
-    filter: blur(10px);
-    opacity: 0;
-    animation: energyPulse 2s ease-out 2s forwards;
-}
-
-@keyframes energyPulse {
-    0% { transform: scale(0.5); opacity: 0; }
-    50% { transform: scale(1); opacity: 0.5; }
-    100% { transform: scale(1.5); opacity: 0; }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .container {
-        padding: 1rem;
-    }
-    
-    .auth-actions {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .btn {
-        max-width: 100%;
-    }
-    
-    .brand-container {
-        margin-top: 5vh;
-    }
-}
-
-@media (max-height: 600px) {
-    .brand-container {
-        margin-top: 2vh;
-    }
-    
-    .actions-container {
-        margin-bottom: 2vh;
-    }
+    height: 1px;
+    background: var(--primary);
+    box-shadow: 0 0 5px var(--primary);
 }
