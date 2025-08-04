@@ -134,3 +134,33 @@ footer {
         font-size: 1.2rem;
     }
 }
+.floating-dashboard-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(0, 243, 255, 0.2);
+    border: 1px solid var(--neon-cyan);
+    color: white;
+    padding: 1rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    z-index: 100;
+    transition: all 0.3s;
+}
+
+.floating-dashboard-btn:hover {
+    background: rgba(0, 243, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+.floating-dashboard-btn span {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+.floating-dashboard-btn:hover span {
+    display: inline;
+}
