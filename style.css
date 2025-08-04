@@ -1,332 +1,188 @@
-/* ===== Cyberpunk Variables ===== */
-:root {
-    --neon-cyan: #00f3ff;
-    --neon-purple: #a162e8;
-    --neon-pink: #ff2a6d;
-    --matrix-green: #00ff41;
-    --deep-space: #0f0c29;
-    --star-dust: rgba(255,255,255,0.1);
-}
-
 /* ===== Base Reset ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
 }
 
+/* ===== Background Animation ===== */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, var(--deep-space), #1a1a3a, #24245e);
+    background: linear-gradient(-45deg, #0f0c29, #1a1a3a, #24245e, #2d2d86);
     background-size: 400% 400%;
-    height: 100vh;
-    overflow: hidden;
+    animation: gradientBG 15s ease infinite;
+    min-height: 100vh;
+    overflow-x: hidden;
     color: white;
-    animation: spaceGradient 15s ease infinite;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* ===== Quantum Loading Animation ===== */
-.loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--deep-space);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.quantum-sphere {
-    width: 80px;
-    height: 80px;
-    border: 3px solid var(--neon-cyan);
-    border-radius: 50%;
-    position: relative;
-    animation: quantumPulse 2s ease-in-out infinite;
-}
-
-.quantum-sphere::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border: 2px dashed var(--neon-purple);
-    border-radius: 50%;
-    animation: spin 10s linear infinite;
-}
-
-.loading-status {
-    margin-top: 30px;
-    text-align: center;
-}
-
-.loading-text {
-    font-family: 'Orbitron', sans-serif;
-    color: var(--neon-cyan);
-    letter-spacing: 2px;
-    font-size: 14px;
-    text-shadow: 0 0 5px var(--neon-cyan);
-}
-
-.loading-percent {
-    font-family: 'Courier New', monospace;
-    color: var(--matrix-green);
-    font-size: 18px;
-    margin-top: 5px;
-    display: inline-block;
-}
-
-/* ===== Main Content ===== */
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
-    padding: 2rem;
-    opacity: 0;
-    animation: fadeIn 1s ease-out 1s forwards;
-}
-
-.hero {
-    text-align: center;
-    margin-top: 5vh;
-}
-
-.logo {
-    font-family: 'Orbitron', sans-serif;
-    font-size: clamp(3rem, 10vw, 5rem);
-    font-weight: 700;
-    background: linear-gradient(to right, var(--neon-cyan), var(--neon-purple));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    margin-bottom: 1rem;
-    position: relative;
-}
-
-.logo::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    text-shadow: 0 0 20px var(--neon-purple);
-    opacity: 0.7;
-}
-
-.tagline {
-    margin-top: 1rem;
-}
-
-.slogan {
-    font-size: clamp(1rem, 4vw, 1.5rem);
-    font-weight: 300;
-    margin-bottom: 0.5rem;
-}
-
-.powered-by {
-    font-size: 0.9rem;
-    opacity: 0.7;
-}
-
-.powered-by span {
-    color: var(--neon-cyan);
-}
-
-/* ===== Cyberpunk Buttons ===== */
-.actions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 5vh;
-    gap: 1rem;
-}
-
-.cyber-button {
-    background: rgba(0, 243, 255, 0.05);
-    border: 1px solid var(--neon-cyan);
-    color: white;
-    padding: 1rem 2rem;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s;
-    width: 100%;
-    max-width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    backdrop-filter: blur(5px);
-}
-
-.cyber-button::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-        to bottom right,
-        transparent 45%,
-        var(--neon-cyan) 50%,
-        transparent 55%
-    );
-    animation: holoScan 3s linear infinite;
-    opacity: 0.5;
-}
-
-.cyber-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 243, 255, 0.3);
-}
-
-.cyber-button:active {
-    transform: translateY(1px);
-}
-
-.cyber-button.ghost {
-    background: rgba(161, 98, 232, 0.05);
-    border: 1px solid var(--neon-purple);
-}
-
-.cyber-button.ghost::before {
-    background: linear-gradient(
-        to bottom right,
-        transparent 45%,
-        var(--neon-purple) 50%,
-        transparent 55%
-    );
-}
-
-/* ===== Footer ===== */
-.neu-footer {
-    background: rgba(15, 12, 41, 0.7);
-    border-top: 1px solid rgba(0, 243, 255, 0.1);
-    padding: 1rem;
-    backdrop-filter: blur(5px);
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.legal-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.legal-links a {
-    color: rgba(255,255,255,0.6);
-    text-decoration: none;
-    font-size: 0.8rem;
-    transition: color 0.3s;
-}
-
-.legal-links a:hover {
-    color: var(--neon-cyan);
-}
-
-.copyright {
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.4);
-}
-
-.copyright span {
-    color: var(--neon-purple);
-}
-
-/* ===== Animations ===== */
-@keyframes spaceGradient {
+@keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-@keyframes quantumPulse {
-    0%, 100% { transform: scale(1); box-shadow: 0 0 10px var(--neon-cyan); }
-    50% { transform: scale(1.05); box-shadow: 0 0 20px var(--neon-cyan); }
+.space-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><circle cx="10%" cy="20%" r="1" fill="white" opacity="0.3"/><circle cx="30%" cy="50%" r="1.5" fill="white" opacity="0.3"/><circle cx="70%" cy="30%" r="1" fill="white" opacity="0.3"/><circle cx="85%" cy="70%" r="2" fill="white" opacity="0.3"/></svg>');
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.energy-pulse {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(0,243,255,0.2) 0%, rgba(0,243,255,0) 70%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: pulse 6s ease-in-out infinite;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+@keyframes pulse {
+    0%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+    50% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
 }
 
-@keyframes holoScan {
-    0% { transform: rotate(0deg) translate(-30%, -30%); }
-    100% { transform: rotate(360deg) translate(-30%, -30%); }
+/* ===== Main Content ===== */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 120px; /* Footer space */
 }
 
-/* ===== Mobile Responsiveness ===== */
-@media (max-width: 768px) {
-    .container {
-        padding: 1rem;
-    }
-    
-    .actions {
-        margin-bottom: 3vh;
-    }
-    
-    .cyber-button {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
-    }
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-/* ===== Footer Fix ===== */
-footer {
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(3rem, 10vw, 5rem);
+    color: #00f3ff;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+}
+
+.tagline {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    margin-bottom: 0.5rem;
+}
+
+.subtext {
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+/* ===== Button Group ===== */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.cyber-btn {
+    background: rgba(0, 243, 255, 0.1);
+    border: 1px solid #00f3ff;
+    color: white;
+    padding: 1rem 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    min-width: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cyber-btn:hover {
+    background: rgba(0, 243, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 243, 255, 0.3);
+}
+
+/* ===== Footer ===== */
+.cyber-footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     padding: 1rem;
-    background: rgba(15, 12, 41, 0.9);
+    background: rgba(15, 12, 41, 0.95);
     backdrop-filter: blur(5px);
     border-top: 1px solid rgba(0, 243, 255, 0.2);
     z-index: 100;
-}
-
-.copyright {
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.6);
     text-align: center;
 }
 
-/* Ensure content doesn't hide behind footer */
-.container {
-    padding-bottom: 70px !important; /* Match footer height */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
 }
+
+.footer-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.copyright {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.5);
+}
+
+/* ===== Mobile Responsiveness ===== */
 @media (max-width: 768px) {
-    footer {
-        padding: 0.8rem;
+    .button-group {
+        flex-direction: column;
+        align-items: center;
     }
-    .copyright {
-        font-size: 0.7rem;
+    
+    .cyber-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 }
-button {
-    transition: all 0.3s ease;
+/* Add this to your existing CSS */
+.guest-btn {
+    background: rgba(161, 98, 232, 0.1) !important;
+    border: 1px solid #a162e8 !important;
 }
-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 243, 255, 0.4);
+
+.guest-btn:hover {
+    background: rgba(161, 98, 232, 0.2) !important;
+    box-shadow: 0 5px 15px rgba(161, 98, 232, 0.3) !important;
+}
+
+/* Ensure button group spacing */
+.button-group {
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+@media (max-width: 768px) {
+    .button-group {
+        gap: 1rem;
+    }
 }
