@@ -3,39 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nova | The Future on Your Wrist</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <title>NOVA | The Future on Your Wrist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="entry.css" />
 </head>
 <body>
-  <div class="main-wrapper">
-    <div class="entry-container">
-      <div class="logo-container">
-        <h1 class="logo">NOVA</h1>
-        <p class="tagline">The Future on Your Wrist</p>
-        <p class="subline">Crafted with pure vision and 1 month of self-learning.</p>
-      </div>
 
-      <div class="button-container">
-        <button class="btn primary" onclick="location.href='home.html'">Sign in as Guest</button>
-        <div class="button-row">
-          <button class="btn secondary">Login</button>
-          <button class="btn secondary">Create Account</button>
-        </div>
+  <!-- Background Video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="assets/bg-entry.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="main-wrapper">
+    <div class="logo-box">
+      <h1 class="logo">NOVA</h1>
+      <p class="tagline">The Future on Your Wrist</p>
+      <p class="subline">Crafted by Zaheer Baloch — Powered by Zenova</p>
+    </div>
+
+    <div class="buttons">
+      <button class="btn guest" onclick="location.href='home.html'">Sign in as Guest</button>
+      <div class="login-row">
+        <button class="btn login" onclick="alert('Login coming soon!')">Login</button>
+        <button class="btn create" onclick="alert('Create Account coming soon!')">Create Account</button>
       </div>
     </div>
 
     <footer class="footer">
-      © 2025 Zenova Inc | Designed by Zaheer Baloch
+      © 2025 Zenova Inc. | Designed by Zaheer Baloch
     </footer>
   </div>
 
-  <script>
-    document.querySelectorAll('.btn.secondary').forEach(btn => {
-      btn.onclick = () => alert("This service will be available soon.");
-    });
-  </script>
 </body>
 </html>
