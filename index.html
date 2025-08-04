@@ -3,49 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>NOVA - The Future on Your Wrist</title>
+    <title>NOVA - AI Smartwatch | Cyberpunk Future</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="entry.css">
 </head>
 <body>
-    <!-- Loading Screen -->
+    <!-- Quantum Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
-        <div class="spinner"></div>
-        <div class="loading-text">Launching Nova...</div>
+        <div class="quantum-loader">
+            <div class="quantum-dot" style="--delay:0s"></div>
+            <div class="quantum-dot" style="--delay:0.2s"></div>
+            <div class="quantum-dot" style="--delay:0.4s"></div>
+        </div>
+        <div class="loading-text">
+            <span class="loading-code">>> SYSTEM_BOOT [NOVA_OS]</span>
+            <span class="loading-percent">0%</span>
+        </div>
     </div>
     
     <!-- Main Content -->
     <div class="container">
-        <!-- Energy Trail Effect -->
-        <div class="energy-trail"></div>
-        
-        <!-- Logo and Text Container -->
-        <div class="brand-container">
+        <!-- Holographic Logo -->
+        <div class="holographic-logo">
             <h1 class="logo">NOVA</h1>
-            <div class="tagline">
+            <div class="logo-subtext">
                 <p class="slogan">The Future on Your Wrist</p>
-                <p class="powered-by">Powered by Zenova Technologies</p>
+                <p class="powered-by">Powered by <span class="zenova-glow">Zenova</span></p>
             </div>
         </div>
         
-        <!-- Buttons Container -->
-        <div class="actions-container">
-            <div class="auth-actions">
-                <button class="btn btn-primary" onclick="window.location.href='comingsoon.html'">Login</button>
-                <button class="btn btn-primary" onclick="window.location.href='comingsoon.html'">Create Account</button>
-            </div>
-            <button class="btn btn-secondary" onclick="window.location.href='entry.html'">Continue as Guest</button>
+        <!-- Cyber Buttons -->
+        <div class="cyber-buttons">
+            <button class="holo-btn" onclick="window.location.href='comingsoon.html'">
+                <i class="fas fa-fingerprint"></i> Login
+            </button>
+            <button class="holo-btn" onclick="window.location.href='comingsoon.html'">
+                <i class="fas fa-user-plus"></i> Create Account
+            </button>
+            <button class="holo-btn guest-btn" onclick="window.location.href='entry.html'">
+                <i class="fas fa-rocket"></i> Guest Mode
+            </button>
         </div>
     </div>
     
-    <!-- Footer -->
-    <div class="footer">
-        © 2025 Zenova Inc. | Designed by Zaheer Baloch
-    </div>
-    
-    <!-- Space Particles -->
-    <div class="particles" id="particles"></div>
-    
+    <!-- Cyber Footer -->
+    <footer class="cyber-footer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>EXPLORE</h4>
+                <a href="#">Tech</a>
+                <a href="#">AI Core</a>
+            </div>
+            <div class="footer-column">
+                <h4>LEGAL</h4>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 ZENOVA INC | <span class="neon-underline">Designed by Zaheer Baloch</span>
+        </div>
+    </footer>
+
     <script src="entry.js"></script>
 </body>
 </html>
