@@ -2,58 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOVA | AI Smartwatch</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Quantum Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="quantum-sphere"></div>
-        <div class="loading-status">
-            <span class="loading-text">INITIALIZING NOVA OS</span>
-            <span class="loading-percent">0%</span>
-        </div>
-    </div>
-    
+    <!-- Animated Background -->
+    <div class="space-particles"></div>
+    <div class="energy-pulse"></div>
+
     <!-- Main Content -->
-    <div class="container">
-        <!-- Holographic Header -->
-        <div class="hero">
-            <h1 class="logo" data-text="NOVA">NOVA</h1>
-            <div class="tagline">
-                <p class="slogan">The Future on Your Wrist</p>
-                <p class="powered-by">Powered by <span>Zenova</span></p>
+    <div class="main-container">
+        <div class="content-wrapper">
+            <h1 class="logo">NOVA</h1>
+            <p class="tagline">The Future on Your Wrist</p>
+            <p class="subtext">Powered by Zenova</p>
+            
+            <!-- Button Group -->
+            <div class="button-group">
+                <button class="cyber-btn" onclick="window.location.href='comingsoon.html'">
+                    <i class="fas fa-fingerprint"></i> Biometric Login
+                </button>
+                <button class="cyber-btn" onclick="window.location.href='comingsoon.html'">
+                    <i class="fas fa-user-plus"></i> Create ID
+                </button>
+                <button class="cyber-btn guest-btn" onclick="window.location.href='entry.html'">
+                    <i class="fas fa-rocket"></i> Guest Access
+                </button>
             </div>
-        </div>
-        
-        <!-- Cyberpunk Buttons -->
-        <div class="actions">
-            <button class="cyber-button" onclick="window.location.href='comingsoon.html'">
-                <i class="fas fa-fingerprint"></i> <span>Biometric Login</span>
-            </button>
-            <button class="cyber-button" onclick="window.location.href='comingsoon.html'">
-                <i class="fas fa-user-astronaut"></i> <span>Create ID</span>
-            </button>
-            <button class="cyber-button ghost" onclick="window.location.href='entry.html'">
-                <i class="fas fa-rocket"></i> <span>Guest Access</span>
-            </button>
         </div>
     </div>
-    
-    <!-- Neu-Footer -->
-    <footer class="neu-footer">
-        <div class="footer-content">
-            <div class="legal-links">
-                <a href="#">Terms</a>
-                <a href="#">Privacy</a>
-                <a href="#">Cookies</a>
-            </div>
-            <div class="copyright">
-                © 2025 ZENOVA Core | <span>Designed by Zaheer Baloch</span>
-            </div>
+
+    <!-- Fixed Footer -->
+    <footer class="cyber-footer">
+        <div class="footer-links">
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+            <a href="#">Cookies</a>
+        </div>
+        <div class="copyright">
+            © 2025 ZENOVA Core | Designed by Zaheer Baloch
         </div>
     </footer>
 
