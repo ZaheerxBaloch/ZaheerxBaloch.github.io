@@ -10,32 +10,32 @@
   <link rel="stylesheet" href="entry.css" />
 </head>
 <body>
-  <div class="entry-container">
-    <div class="logo-container">
-      <h1 class="logo" id="logo">NOVA</h1>
-      <p class="tagline" id="tagline">The Future on Your Wrist</p>
+  <div class="main-wrapper">
+    <div class="entry-container">
+      <div class="logo-container">
+        <h1 class="logo">NOVA</h1>
+        <p class="tagline">The Future on Your Wrist</p>
+        <p class="subline">Crafted with pure vision and 1 month of self-learning.</p>
+      </div>
+
+      <div class="button-container">
+        <button class="btn primary" onclick="location.href='home.html'">Sign in as Guest</button>
+        <div class="button-row">
+          <button class="btn secondary">Login</button>
+          <button class="btn secondary">Create Account</button>
+        </div>
+      </div>
     </div>
 
-    <div class="button-group">
-  <a href="home.html" class="btn guest">Sign in as Guest</a>
-  <a href="comingsoon.html" class="btn login">Login</a>
-  <a href="comingsoon.html" class="btn create">Create Account</a>
-</div>
+    <footer class="footer">
+      © 2025 Zenova Inc | Designed by Zaheer Baloch
+    </footer>
+  </div>
 
-<footer class="entry-footer">
-  © 2025 Zenova Inc | Designed by Zaheer Baloch
-</footer>
-
-  <!-- Preloads -->
-  <link rel="preload" href="home.html" as="style">
-  <link rel="preload" href="dashboard.html" as="style">
-  <link rel="preload" href="product.html" as="style">
-  <link rel="preload" href="style.css" as="style">
-  <link rel="preload" href="dashboard.css" as="script">
-  <link rel="preload" href="product.css" as="script">
-  <link rel="preload" href="main.js" as="script">
-  <link rel="preload" href="dashboard.js" as="script">
-  <link rel="preload" href="product.js" as="script">
-  <script src="entry.js"></script>
+  <script>
+    document.querySelectorAll('.btn.secondary').forEach(btn => {
+      btn.onclick = () => alert("This service will be available soon.");
+    });
+  </script>
 </body>
 </html>
