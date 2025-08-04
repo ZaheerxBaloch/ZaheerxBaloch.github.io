@@ -9,40 +9,81 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Loading Screen -->
+    <!-- Quantum Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
-        <div class="loader-dots">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+        <div class="quantum-loader">
+            <div class="quantum-dot" style="--i:1"></div>
+            <div class="quantum-dot" style="--i:2"></div>
+            <div class="quantum-dot" style="--i:3"></div>
+            <div class="quantum-core"></div>
         </div>
-        <p>Initializing NOVA OS...</p>
+        <div class="loading-text">
+            <span class="loading-code">>_ BOOT_SEQUENCE_INIT</span>
+            <span class="loading-percent" id="loadingPercent">0%</span>
+        </div>
+        <div class="scanline"></div>
     </div>
 
     <!-- Main Content -->
     <div class="container">
-        <h1 class="logo">NOVA</h1>
-        <div class="tagline">The Future on Your Wrist</div>
-        <div class="subtext">Powered by Zenova Core</div>
+        <!-- Holographic Background Elements -->
+        <div class="holographic-bg">
+            <div class="energy-grid"></div>
+            <div class="particle-field"></div>
+        </div>
+
+        <!-- Animated Logo -->
+        <div class="logo-wrapper">
+            <h1 class="logo" data-text="NOVA">NOVA</h1>
+            <div class="logo-aura"></div>
+            <div class="logo-sparkles">
+                <div class="sparkle" style="--n:1"></div>
+                <div class="sparkle" style="--n:2"></div>
+                <div class="sparkle" style="--n:3"></div>
+            </div>
+        </div>
+
+        <p class="tagline">The Future on Your Wrist</p>
+        <p class="subtext">Powered by Zenova Core</p>
         
+        <!-- Cyber Buttons -->
         <div class="buttons">
-            <a href="dashboard.html" class="cyber-btn">
-    <i class="fas fa-tachometer-alt"></i> Go to Dashboard
+            <a href="dashboard.html" class="cyber-btn demo-btn">
+                <i class="fas fa-tachometer-alt"></i> Demo Dashboard
+                <span class="demo-badge">PREVIEW</span>
             </a>
-            <button class="btn-login" onclick="window.location.href='comingsoon.html'">
+            <button class="cyber-btn" onclick="window.location.href='comingsoon.html'">
                 <i class="fas fa-fingerprint"></i> Biometric Login
+                <span class="btn-ripple"></span>
             </button>
-            <button class="btn-create" onclick="window.location.href='comingsoon.html'">
+            <button class="cyber-btn" onclick="window.location.href='comingsoon.html'">
                 <i class="fas fa-user-plus"></i> Create Account
+                <span class="btn-ripple"></span>
             </button>
-            <button class="btn-guest" onclick="window.location.href='home.html'">
+            <button class="cyber-btn guest-btn" onclick="window.location.href='home.html'">
                 <i class="fas fa-rocket"></i> Guest Access
+                <span class="btn-ripple"></span>
             </button>
         </div>
     </div>
 
-    <footer>
-        © 2025 ZENOVA | Designed by Zaheer Baloch
+    <!-- Neu-Footer -->
+    <footer class="cyber-footer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>EXPLORE</h4>
+                <a href="#">Tech Specs</a>
+                <a href="#">AI Features</a>
+            </div>
+            <div class="footer-column">
+                <h4>SUPPORT</h4>
+                <a href="#">Contact</a>
+                <a href="#">Docs</a>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 ZENOVA INDUSTRIES | <span class="designer-glow">Designed by Zaheer Baloch</span>
+        </div>
     </footer>
 
     <script src="script.js"></script>
