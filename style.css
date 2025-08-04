@@ -145,10 +145,11 @@ section {
 .hero {
   position: relative;
   min-height: 100vh;
-  padding: 60px 20px 40px;
+  margin-top: 70px; /* Creates space below fixed navbar */
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 40px 20px; /* Adds breathing space around content */
   background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   overflow: visible;
 }
